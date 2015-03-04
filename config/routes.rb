@@ -1,18 +1,11 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   devise_for :users
-=======
   resources :admins
-
   resources :gears
-
   resources :pages
-
   resources :djs
-
   resources :users
-
->>>>>>> create-model
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
