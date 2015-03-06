@@ -9,21 +9,19 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+# newgams
+ 	gem 'simple_form'
+	gem 'kaminari'
+# newgems
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
 	gem 'byebug'
 	gem 'web-console', '~> 2.0'
-	gem 'jquery-rails'
 	gem 'turbolinks'
-	gem 'jbuilder', '~> 2.0'
 	gem 'devise'
+	gem 'spring'
 	gem 'sdoc', '~> 0.4.0', group: :doc
 end
 
-group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
 
