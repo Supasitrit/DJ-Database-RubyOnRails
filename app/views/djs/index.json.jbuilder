@@ -1,4 +1,4 @@
 json.array!(@djs) do |dj|
-  json.extract! dj, :id, :genre, :text, :id, :integer
+  json.extract! dj, :id, :name, :description, :genre
   json.url dj_url(dj, format: :json)
 end

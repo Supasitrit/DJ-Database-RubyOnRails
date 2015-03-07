@@ -1,23 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @dj.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dj.description %>
+</p>
+
+<p>
   <strong>Genre:</strong>
   <%= @dj.genre %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @dj.text %>
-</p>
-
-<p>
-  <strong>Id:</strong>
-  <%= @dj.id %>
-</p>
-
-<p>
-  <strong>Integer:</strong>
-  <%= @dj.integer %>
 </p>
 
 <%= link_to 'Edit', edit_dj_path(@dj) %> |

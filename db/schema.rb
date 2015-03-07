@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307134325) do
+ActiveRecord::Schema.define(version: 20150307144833) do
+
+  create_table "djs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "genre"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "pages", force: :cascade do |t|
     t.string   "title"

@@ -2,13 +2,12 @@
 
 <h1>Listing Djs</h1>
 
-<table>
+<table class = "table">
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Description</th>
       <th>Genre</th>
-      <th>Text</th>
-      <th>Id</th>
-      <th>Integer</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +15,9 @@
   <tbody>
     <% @djs.each do |dj| %>
       <tr>
+        <td><%= dj.name %></td>
+        <td><%= dj.description %></td>
         <td><%= dj.genre %></td>
-        <td><%= dj.text %></td>
-        <td><%= dj.id %></td>
-        <td><%= dj.integer %></td>
         <td><%= link_to 'Show', dj %></td>
         <td><%= link_to 'Edit', edit_dj_path(dj) %></td>
         <td><%= link_to 'Destroy', dj, method: :delete, data: { confirm: 'Are you sure?' } %></td>

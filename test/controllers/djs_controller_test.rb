@@ -18,7 +18,7 @@ class DjsControllerTest < ActionController::TestCase
 
   test "should create dj" do
     assert_difference('Dj.count') do
-      post :create, dj: { genre: @dj.genre, id: @dj.id, integer: @dj.integer, text: @dj.text }
+      post :create, dj: { description: @dj.description, genre: @dj.genre, name: @dj.name }
     end
 
     assert_redirected_to dj_path(assigns(:dj))
@@ -35,7 +35,7 @@ class DjsControllerTest < ActionController::TestCase
   end
 
   test "should update dj" do
-    patch :update, id: @dj, dj: { genre: @dj.genre, id: @dj.id, integer: @dj.integer, text: @dj.text }
+    patch :update, id: @dj, dj: { description: @dj.description, genre: @dj.genre, name: @dj.name }
     assert_redirected_to dj_path(assigns(:dj))
   end
 
