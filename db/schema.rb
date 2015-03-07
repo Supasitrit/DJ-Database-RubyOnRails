@@ -11,26 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307094833) do
-
-  create_table "djs", force: :cascade do |t|
-    t.string   "name"
-    t.string   "text"
-    t.string   "genre"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "gears", force: :cascade do |t|
-    t.string   "type"
-    t.string   "text"
-    t.string   "name"
-    t.string   "details"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20150307134325) do
 
   create_table "pages", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "djid"
+    t.integer  "gearid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

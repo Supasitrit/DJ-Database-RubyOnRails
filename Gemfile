@@ -13,13 +13,13 @@ gem 'jbuilder', '~> 2.0'
  	gem 'simple_form'
 	gem 'kaminari'
 # newgems
+gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
 	gem 'byebug'
 	gem 'web-console', '~> 2.0'
-	gem 'turbolinks'
-	gem 'devise'
+	
 	gem 'spring'
 	gem 'sdoc', '~> 0.4.0', group: :doc
 end
