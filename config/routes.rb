@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :pages
   resources :djs
   resources :users
-  root 'static_page#home'
+  root 'djs#index'
   get 'about' => 'static_page#about'
   get 'contact' => 'static_page#contact'
   get 'dj' => 'djs#index'

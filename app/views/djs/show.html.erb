@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+
+<%= image_tag( @dj.name+".jpg", :alt => "djs-images",class:"img-responsive img-rounded")%>
+
+<h1>
+  <strong>
   <%= @dj.name %>
-</p>
+  </strong>
+</h1>
 
 <p>
   <strong>Description:</strong>

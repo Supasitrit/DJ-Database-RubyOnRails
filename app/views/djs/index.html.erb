@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Djs</h1>
+<h1>Artist</h1>
+<p>
+  We’re a community building the ultimate database of music producers and the gear they use. Whether in their studio or as part of their live setup, our goal is to catalog all the VST plugins they use, their DAW, every synthesizer and drum machine, and the rest of their equipment. 
+</p>
 
-<table class = "table">
+<!-- <table class = "table">
   <thead>
     <tr>
       <th>Name</th>
@@ -24,7 +26,18 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
+
+<div class = "container">
+  <tr class = "imgrow">
+  <% @djs.each do |dj| %>
+    <td data-gallery>
+    <%= image_tag( dj.name+".jpg", :alt => "djs-images",class:"img-responsive", style: "width:300px; height:200px;")%>
+    <%= link_to dj.name, dj_path(dj) %>
+    </td>
+  <% end %>
+  </tr>
+</div>
 
 <br>
 
