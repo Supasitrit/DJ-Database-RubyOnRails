@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :users  resources :gears
+  devise_for :users
+  resources :gears
   resources :pages
   resources :djs
   resources :users
