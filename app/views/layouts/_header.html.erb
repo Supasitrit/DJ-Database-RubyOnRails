@@ -1,7 +1,6 @@
       <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <!-- class="active" -->
             <li role="presentation" >
               <%= link_to "Home", root_path%>
             </li>
@@ -12,16 +11,19 @@
               <%= link_to "Contact", contact_path %>
             </li>
             <% if user_signed_in? %>
-              <li><%= link_to current_user.first_name,  user_path(id: current_user.id) %></li>
+              <li><%= link_to current_user.email,  user_path(id: current_user.id) %></li>
               <li><%= link_to "Log Out",destroy_user_session_path, :method => :delete  %></li>
             <% else %>
               <li><%= link_to "Log In", new_user_session_path %></li>
               <li><%= link_to "Create Account",new_user_registration_path %></li>
             <% end %>
-
           </ul>
         </nav>
-        <h3 class="text-muted">DJDB</h3>
+        <h3 class="text-muted">
+          DJDatabase
+        </h3>
+
+        
       </div><!-- 
       <div class="jumbotron">
         <h1>Jumbotron heading</h1>

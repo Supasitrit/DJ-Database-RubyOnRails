@@ -1,10 +1,10 @@
-before_action :authenticate_user!
+
 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
+  <strong>Email:</strong>
+  <%= @user.email %>
 </p>
 
 <p>
@@ -12,10 +12,6 @@ before_action :authenticate_user!
   <%= @user.text %>
 </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
 
 <p>
   <strong>Text:</strong>
@@ -25,11 +21,6 @@ before_action :authenticate_user!
 <p>
   <strong>Id:</strong>
   <%= @user.id %>
-</p>
-
-<p>
-  <strong>Integer:</strong>
-  <%= @user.integer %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
