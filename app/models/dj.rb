@@ -1,4 +1,5 @@
 class Dj < ActiveRecord::Base
+	require 'will_paginate/array'
 	has_one :page
 	# attr_accessible :title, :content
  
@@ -10,4 +11,5 @@ class Dj < ActiveRecord::Base
     # where(:title, query) -> This would return an exact match of the query
     where("name like ?", "%#{query}%") 
   end
+  # self.per_page = 10
 end

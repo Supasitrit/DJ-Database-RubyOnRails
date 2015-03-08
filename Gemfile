@@ -15,13 +15,14 @@ gem 'jbuilder', '~> 2.0'
 # newgems
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.3'
+# pagination
+gem 'will_paginate', '~> 3.0.5'
+# 
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
 	gem 'byebug'
 	gem 'web-console', '~> 2.0'
-	
 	gem 'spring'
-	gem 'sdoc', '~> 0.4.0', group: :doc
 end
 
 

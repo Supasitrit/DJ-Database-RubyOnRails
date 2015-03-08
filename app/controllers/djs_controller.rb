@@ -4,13 +4,21 @@ class DjsController < ApplicationController
   # GET /djs
   # GET /djs.json
   def index
-    @djs = Dj.all
+    # @djs = Dj.all
+    # WillPaginate.per_page = 10
+    # @djs = Dj.paginate(:page => params[:page])
+    
     if params[:search]
       @djs = Dj.search(params[:search]).order("created_at DESC")
     else
       @djs = Dj.order("created_at DESC")
     end
+
+        @djs = Dj.paginate(:page => params[:page], :per_page => 3)
+
   end
+
+
 
   # GET /djs/1
   # GET /djs/1.json
