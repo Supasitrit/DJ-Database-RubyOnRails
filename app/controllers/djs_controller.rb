@@ -5,6 +5,11 @@ class DjsController < ApplicationController
   # GET /djs.json
   def index
     @djs = Dj.all
+    if params[:search]
+      @djs = Dj.search(params[:search]).order("created_at DESC")
+    else
+      @djs = Dj.order("created_at DESC")
+    end
   end
 
   # GET /djs/1
