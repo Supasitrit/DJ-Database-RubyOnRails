@@ -17,7 +17,11 @@
 <p>
   <strong>Genre:</strong>
   <%= @dj.genre %>
-</p>
 
-<%= link_to 'Edit', edit_dj_path(@dj) %> |
-<%= link_to 'Back', djs_path %>
+
+</p>
+<% if user_signed_in? %>
+	<%= link_to 'Edit', edit_dj_path(@dj) %> |
+	<%= link_to 'Back', djs_path %>
+<% else %>
+<% end %>
