@@ -8,14 +8,15 @@ class DjsController < ApplicationController
     # WillPaginate.per_page = 10
     # @djs = Dj.paginate(:page => params[:page])
     
+    @djs = Dj.paginate(:page => params[:page], :per_page => 3)
+
+  end
+  def result
     if params[:search]
       @djs = Dj.search(params[:search]).order("created_at DESC")
     else
       @djs = Dj.order("created_at DESC")
     end
-
-        @djs = Dj.paginate(:page => params[:page], :per_page => 3)
-
   end
 
 
