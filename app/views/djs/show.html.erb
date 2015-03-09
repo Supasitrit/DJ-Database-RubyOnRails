@@ -20,6 +20,10 @@
   <strong>Genre:</strong>
   <%= @dj.genre %>
 </p>
+<p>
+  <strong>ID:</strong>
+  <%= @dj.id %>
+</p>
 <% if user_signed_in? %>
 	<%= link_to 'Destroy', @dj, method: :delete, data: { confirm: 'Are you sure?' } %>
 	<%= link_to 'Edit', edit_dj_path(@dj) %> |

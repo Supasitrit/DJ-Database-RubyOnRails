@@ -3,26 +3,26 @@
     <% if user_signed_in? %>
     <!-- <button class = "btn btn-success btn-lg"><%= link_to 'Add New Dj', new_dj_path %></button> -->
     <%= button_tag( "Add new dj",class: "btn btn-success btn-lg", href: new_dj_path)%>
-
-
-
-
-
     <% end %>
-    <br>
-    <br>
 
-    <div class = "col-sm-12">
-        <% @djs.each do |dj| %>
-          <div class= "col-md-4">
+    <!-- row -->
+    <div class = "row">
+        <div class="clearfix visible-xs-block"></div>
+        <%  @djs.each do |dj| %>
+        <!-- column -->        
+        <div class= "col-xs-6 col-sm-4">
             <a href = <%=dj_path(dj)%>>
-            <%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "width: 100%")%>
+            <%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: 175px")%>
             <%= link_to dj.name, dj_path(dj) %>
             </a>
           </div>
         <% end %>
     </div>
-    <br>
+
+
+
+
+    
     <div class="apple_pagination">
         <div class="page_info">
           <%= page_entries_info @djs %>
