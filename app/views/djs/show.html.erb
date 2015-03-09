@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div class = "center jumbotron" >
 
+  <p id="notice"><%= notice %></p>
 
-<%= image_tag( @dj.name+".jpg", :alt => "djs-images",class:"img-responsive img-rounded")%>
-
+<div class="container text-center">
+<%= image_tag( @dj.name+".jpg", :alt => "djs-images",class:"img-responsive img-rounded") %>
+</div>
 <h1>
   <strong>
   <%= @dj.name %>
@@ -24,3 +26,7 @@
 	<%= link_to 'Back', djs_path %>
 <% else %>
 <% end %>
+
+
+
+</div>
