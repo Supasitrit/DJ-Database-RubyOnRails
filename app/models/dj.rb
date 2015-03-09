@@ -1,6 +1,6 @@
 class Dj < ActiveRecord::Base
 	require 'will_paginate/array'
-	has_one :page
+	# has_one :page
 	# attr_accessible :title, :content
  
  #  validates :title, presence: true, uniqueness: true
