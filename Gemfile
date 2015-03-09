@@ -18,6 +18,9 @@ gem 'bootstrap-sass', '~> 3.3.3'
 # pagination
 gem 'will_paginate', '~> 3.0.5'
 # 
+# commontator for comment
+gem 'commontator', '~> 4.10.0'
+# 
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
 	gem 'byebug'
