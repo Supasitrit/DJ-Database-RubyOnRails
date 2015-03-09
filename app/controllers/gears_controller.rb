@@ -15,6 +15,7 @@ class GearsController < ApplicationController
   # GET /gears/new
   def new
     @gear = Gear.new
+    # @gear.djs_gears.build
   end
 
   # GET /gears/1/edit
@@ -69,6 +70,6 @@ class GearsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gear_params
-      params.require(:gear).permit(:type, :text, :name, :text, :details, :text, :id, :integer)
+      params.require(:gear).permit(:name, :description, :geartype_id)
     end
 end

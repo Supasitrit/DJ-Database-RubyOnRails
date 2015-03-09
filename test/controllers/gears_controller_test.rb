@@ -18,7 +18,7 @@ class GearsControllerTest < ActionController::TestCase
 
   test "should create gear" do
     assert_difference('Gear.count') do
-      post :create, gear: { details: @gear.details, id: @gear.id, integer: @gear.integer, name: @gear.name, text: @gear.text, text: @gear.text, text: @gear.text, type: @gear.type }
+      post :create, gear: { description: @gear.description, geartype_id: @gear.geartype_id, name: @gear.name }
     end
 
     assert_redirected_to gear_path(assigns(:gear))
@@ -35,7 +35,7 @@ class GearsControllerTest < ActionController::TestCase
   end
 
   test "should update gear" do
-    patch :update, id: @gear, gear: { details: @gear.details, id: @gear.id, integer: @gear.integer, name: @gear.name, text: @gear.text, text: @gear.text, text: @gear.text, type: @gear.type }
+    patch :update, id: @gear, gear: { description: @gear.description, geartype_id: @gear.geartype_id, name: @gear.name }
     assert_redirected_to gear_path(assigns(:gear))
   end
 

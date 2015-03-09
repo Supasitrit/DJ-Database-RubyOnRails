@@ -9,8 +9,10 @@ class DjsController < ApplicationController
     # @djs = Dj.paginate(:page => params[:page])
     
     @djs = Dj.paginate(:page => params[:page], :per_page => 9)
+    
 
   end
+  # GET /djresult
   def result
     if params[:search]
       @djs = Dj.search(params[:search]).order("created_at DESC")
@@ -18,7 +20,10 @@ class DjsController < ApplicationController
       @djs = Dj.order("created_at DESC")
     end
   end
-
+  # GET /gears
+  def gear
+    @gears = Gear.first
+  end
 
 
   # GET /djs/1

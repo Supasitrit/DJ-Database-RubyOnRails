@@ -9,7 +9,7 @@
       </button>
     <%= link_to "DJDatabase", root_path, class: "navbar-brand" %>
     </div>
-      <nav class="collapse navbar-collapse bs-navbar-collapse ">
+      <nav class="collapse navbar-collapse bs-navbar-collapse pull-right">
       <ul class="nav navbar-nav ">
         <li role="presentation">
               <%= link_to "Home", root_path%>
@@ -33,7 +33,7 @@
         <%= form_tag(djresult_path, :method => "get", class: "navbar-form navbar-right", role:"serach") do %>
         <div class="form-group">
           <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search Djs" %>
-          <button class="btn btn-default" type="submit">Submit<i class="icon-search"></i></button>
+          <button class="btn btn-default" type="submit">Search!<i class="icon-search"></i></button>
         </div>
       <% end %>
       </ul>

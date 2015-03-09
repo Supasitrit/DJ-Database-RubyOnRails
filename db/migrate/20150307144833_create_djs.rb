@@ -5,6 +5,8 @@ class CreateDjs < ActiveRecord::Migration
       t.string :description
       t.string :genre
 
+      
+
       t.timestamps null: false
     end
   end

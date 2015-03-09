@@ -2,10 +2,10 @@
     <h1>DJDatabase</h1> 
     <h2>Find djs and gears they use!</h2>
     <% if user_signed_in? %>
-    <!-- <button class = "btn btn-success btn-lg"><%= link_to 'Add New Dj', new_dj_path %></button> -->
+    <a href = <%=new_dj_path%>><button class = "btn btn-success btn-lg" >Add New Dj</button>
+    </a>
     <p>
-    <%= button_tag( "Add new dj",class: "btn btn-success btn-lg", href: new_dj_path)%>
-    <% end %>
+        <% end %>
     </p>
 
     <!-- row -->
@@ -13,7 +13,7 @@
         <div class="clearfix visible-xs-block"></div>
         <%  @djs.each do |dj| %>
         <!-- column -->        
-        <div class= "col-xs-12 col-sm-4" style = "height:200px">
+        <div class= "col-xs-12 col-sm-4" style = "height:250px">
             <a href = <%=dj_path(dj)%>>
             <%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: 175px")%>
             <%= link_to dj.name, dj_path(dj) %>
@@ -21,10 +21,6 @@
           </div>
         <% end %>
     </div>
-
-
-
-
     
     <div class="apple_pagination">
         <div class="page_info">
@@ -32,5 +28,6 @@
         </div>
         <%= will_paginate @djs%>
     </div>
-    <br>
+
+
 </div>

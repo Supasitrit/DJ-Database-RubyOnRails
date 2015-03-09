@@ -1,4 +1,4 @@
 json.array!(@gears) do |gear|
-  json.extract! gear, :id, :type, :text, :name, :text, :details, :text, :id, :integer
+  json.extract! gear, :id, :name, :description, :geartype_id
   json.url gear_url(gear, format: :json)
 end
