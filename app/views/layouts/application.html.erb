@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title class = "title"><h1>DJ Database</h1></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title class = "title">DJDB</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
     <meta charset="utf-8">
@@ -29,7 +29,8 @@
 	<% if alert %>
 	  <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-	<%= render 'layouts/body' %>
 
+	<%= render 'layouts/body' %>
+  <%= debug(params) if Rails.env.development? %>
   
 </html>

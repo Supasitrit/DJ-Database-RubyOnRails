@@ -1,14 +1,9 @@
-      <div class="header">
-
-
-        <nav>
-        <h1><strong>
-            DJDatabase
-          </strong>
-            </h1>
-          <ul class="nav nav-tabs nav-justified pull-right">
-            
-            <li role="presentation">
+<header class="navbar navbar-fixed-top navbar-inverse" id = "header">
+  <div class="container">
+    <%= link_to "DJDatabase", root_path, class: "navbar-brand" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation">
               <%= link_to "Home", root_path%>
             </li>
             <li role="presentation">
@@ -17,57 +12,23 @@
             <li role="presentation">
               <%= link_to "Contact", contact_path %>
             </li>
-            <% if user_signed_in? %>
-              <li><%= link_to current_user.email,  user_path(id: current_user.id) %></li>
+        <% if user_signed_in? %>
+        <li class="dropdown">
+          <ul class = "dropdown-menu">
+            <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Settings", '#' %></li>
+              <li class="divider"></li>
+              <li>
+                <li><%= link_to current_user.email, user_path(id: current_user.id) %></li>
               <li><%= link_to "Log Out",destroy_user_session_path, :method => :delete  %></li>
-            <% else %>
-              <li><%= link_to "Log In", new_user_session_path %></li>
-              <li><%= link_to "Create Account",new_user_registration_path %></li>
-            <% end %>
+              </li>
           </ul>
-         <!--  <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-            When submit the form, the view rendered will be the index view of our articles resource        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-
-      </form>  -->
-      <%= form_tag(djresult_path, :method => "get", class: "navbar-form navbar-right", role:"serach") do %>
-        <div class="form-group">
-          <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search Djs" %>
-          <!-- In order to have the "search" icon int the button, we need to use plain HTML instead 
-               of using a Rails form helper -->
-          <button class="btn btn-default" type="submit">Submit<i class="icon-search"></i></button>
-        </div>
-      <% end %>
+          </li>
+        <% else %>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+          <li><%= link_to "Create Account",new_user_registration_path %></li>
+        <% end %>
+      </ul>
     </nav>
-        
-
-        
-      </div><!-- 
-      <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-      </div> -->
+  </div>
+</header>
