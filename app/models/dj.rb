@@ -2,6 +2,8 @@ class Dj < ActiveRecord::Base
 	require 'will_paginate/array'
 	
 	has_and_belongs_to_many :gears
+
+	acts_as_commontable
 	# has_one :page
 	# attr_accessible :title, :content
  

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Commontator::Engine => '/commontator'
   devise_for :users    
   resources :djs
   resources :users
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_page#contact'
   get 'dj' => 'djs#index'
   get 'djresult' => 'djs#result'
+
   # devise_for :users, controllers: {
   #   sessions: 'sessions'
   # }
