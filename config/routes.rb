@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :gears
+
   mount Commontator::Engine => '/commontator'
   devise_for :users    
   resources :djs

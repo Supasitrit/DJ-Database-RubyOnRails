@@ -1,7 +1,7 @@
 class Dj < ActiveRecord::Base
 	require 'will_paginate/array'
 	
-	has_and_belongs_to_many :gears
+	has_and_belongs_to_many :gears, :join_table => "djs_gears"
 
 	acts_as_commontable
 	# has_one :page

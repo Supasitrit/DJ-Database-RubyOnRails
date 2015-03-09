@@ -4,8 +4,7 @@ class CreateDjs < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :genre
-
-      
+      t.integer :gear_id
 
       t.timestamps null: false
     end
