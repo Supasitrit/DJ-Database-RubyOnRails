@@ -20,10 +20,6 @@ class DjsController < ApplicationController
       @djs = Dj.order("created_at DESC")
     end
   end
-  # GET /gears
-  def gear
-    @gears = Gear.first
-  end
 
 
   # GET /djs/1
