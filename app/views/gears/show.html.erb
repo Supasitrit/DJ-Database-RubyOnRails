@@ -21,8 +21,8 @@
   <%= @gear.dj_id %>
 </p>
 <p>
-	<strong>Dj that use</strong>
-	<% @gear.djs.each do |dj|%>
+	<strong>Dj that use </strong>
+<%= @gear.name %>	<% @gear.djs.each do |dj|%>
 	
     <h2><%= link_to dj.name, dj_path %></h2><br>
 	<% end %>
