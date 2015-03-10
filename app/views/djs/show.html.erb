@@ -31,13 +31,14 @@
 <% else %>
 <% end %>
 </div>
+
 <div class = "center jumbotron">
-  <h1>Gears <%= @dj.name %> Use:</h1>
-  <%= @dj.gears.each do |gear| %>
-    <h2><% @dj.gears.name %> </h2><br>
-    <%= link_to "GEAR PAGE", gear_path %><br>
+  <h1>Gears <%= @dj.name %> Use:</h1><br>
+  <% @dj.gears.each do |gear| %>
+    <h2><%= link_to gear.name, gear_path %></h2><br>
   <% end %>
 </div>
+
 <div class = "center jumbotron">
   <%= commontator_thread(@dj) %>
   </div>

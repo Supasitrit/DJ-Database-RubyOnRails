@@ -26,6 +26,7 @@ class DjsController < ApplicationController
   # GET /djs/1.json
   def show
     commontator_thread_show(@dj)
+    @gears = Gear.all
   end
 
   # GET /djs/new

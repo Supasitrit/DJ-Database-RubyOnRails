@@ -27,5 +27,7 @@ group :development, :test do
 	gem 'web-console', '~> 2.0'
 	gem 'spring'
 end
-
+group :development, :test do
+	gem 'annotate', '~> 2.6.6'
+end
 
