@@ -6,7 +6,7 @@ class CreateGears < ActiveRecord::Migration
       t.string :description
       t.integer :geartype_id
       t.integer :dj_id
-
+      
       t.timestamps null: false
     end
   end

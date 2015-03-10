@@ -1,5 +1,5 @@
 <div class="center jumbotron">
-    <h1>DJDatabase</h1> 
+    <h1>DJ Database</h1> 
     <h2>Find djs and gears they use!</h2>
     <% if user_signed_in? %>
     <a href = <%=new_dj_path%>><button class = "btn btn-success btn-lg" >Add New Dj</button>
@@ -13,10 +13,12 @@
         <div class="clearfix visible-xs-block"></div>
         <%  @djs.each do |dj| %>
         <!-- column -->        
-        <div class= "col-xs-12 col-sm-4" style = "height:250px">
+        <div class= "col-xs-12 col-sm-4" style="padding-bottom: 50px">
             <a href = <%=dj_path(dj)%>>
+                <strong>
             <%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: 175px")%>
             <%= link_to dj.name, dj_path(dj) %>
+        </strong>
             </a>
           </div>
         <% end %>
