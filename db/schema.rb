@@ -59,13 +59,16 @@ ActiveRecord::Schema.define(version: 20150309204225) do
     t.string   "name"
     t.string   "description"
     t.string   "genre"
+    t.integer  "gear_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-  create_table "djs_gears", id: false, force: :cascade do |t|
-    t.integer "dj_id",   null: false
-    t.integer "gear_id", null: false
+  create_table "djs_gears", force: :cascade do |t|
+    t.integer  "dj_id"
+    t.integer  "gear_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "gears", force: :cascade do |t|
@@ -75,13 +78,6 @@ ActiveRecord::Schema.define(version: 20150309204225) do
     t.integer  "dj_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "pages", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "djid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

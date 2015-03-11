@@ -1,5 +1,5 @@
 class CreateGears < ActiveRecord::Migration
-  drop_table :gears
+  # drop_table :gears
   def change
     create_table :gears do |t|
       t.string :name
