@@ -21,6 +21,9 @@ gem 'will_paginate', '~> 3.0.5'
 # commontator for comment
 gem 'commontator', '~> 4.10.0'
 # 
+# paperclip
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+# 
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
 	gem 'byebug'
