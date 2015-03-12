@@ -21,6 +21,13 @@ class DjsController < ApplicationController
     end
   end
 
+  def remove_photo
+    @dj = Dj.find(params[:id])
+    @dj.avatar = nil
+    @dj.save
+    redirect_to @dj, flash: { success: 'DJ profile photo has been removed.' }
+  end
+
 
   # GET /djs/1
   # GET /djs/1.json
@@ -86,6 +93,6 @@ class DjsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dj_params
-      params.require(:dj).permit(:name, :description, :genre)
+      params.require(:dj).permit(:name, :description, :genre, :avatar)
     end
 end
