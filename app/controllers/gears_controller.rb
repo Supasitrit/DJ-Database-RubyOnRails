@@ -10,6 +10,7 @@ class GearsController < ApplicationController
   # GET /gears/1
   # GET /gears/1.json
   def show
+    @gears = Gear.all
   end
 
   # GET /gears/new

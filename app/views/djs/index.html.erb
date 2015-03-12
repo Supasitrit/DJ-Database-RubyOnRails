@@ -12,14 +12,12 @@
     <div class = "row">
         <!-- <div class="clearfix visible-xs-block"></div> -->
         <%  @djs.each do |dj| %>
-        <!-- column -->        
-        
+        <!-- column -->
         <div class= "col-xs-12 col-sm-4" style="min-height: 300px">
             <a href = <%=dj_path(dj)%>>
                 
             <!--<%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: auto")%>-->
-            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded" %>
-
+            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded img-thumbnail" %>
             </a>
             <strong>
             <%= link_to dj.name, dj_path(dj) %>

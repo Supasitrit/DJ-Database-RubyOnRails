@@ -4,7 +4,7 @@
 
 <!-- DJS -->
 <div class="center jumbotron">
-	<h2> Top DJs </h2>
+	<h2> DJs </h2>
 <!-- row -->
     <div class = "row">
         <!-- <div class="clearfix visible-xs-block"></div> -->
@@ -13,7 +13,7 @@
         <div class= "col-xs-12 col-sm-4" >
             <a href = <%=dj_path(dj)%>>
             <!--<%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: auto")%>-->
-            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded" %>
+            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded img-thumbnail" %>
             </a>
             <strong>
             <%= link_to dj.name, dj_path(dj) %>
@@ -31,19 +31,16 @@
 <!-- DJs -->
 <!-- GEARS -->
 
-	<h2> Top GEARs </h2>
+	<h2> GEARs </h2>
 <!-- row -->
     <div class = "row">
-        <%  @gears.each do |dj| %>
+        <%  @gears.each do |gear| %>
         <!-- column -->
         <div class= "col-xs-12 col-sm-4" >
-            <a href = <%=gear_path(gear)%>>
-            <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
-            </a>
             <strong>
             <%= link_to gear.name, gear_path(gear) %>
-        </strong>
-          </div>
+	        </strong>
+        </div>
         <% end %>
     </div>
 <a href = <%=gears_path%>>
