@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   devise_for :users    
   resources :djs
   resources :users
-  root 'djs#index'
+  # root 'djs#index'
+  root 'static_page#home'
   get 'about' => 'static_page#about'
   get 'contact' => 'static_page#contact'
   get 'dj' => 'djs#index'
