@@ -1,16 +1,18 @@
-<div class = "center jumbotron">
-	<h1>Editing User</h1>
-
-<%= link_to "Change your password or email", edit_user_registration_path %>
-
-<br>
-
-<%= form_for @user, :url => users_path, :html => { :multipart => true } do |form| %>
-  <%= form.file_field :avatar %>
-<% end %>
-
-
+  <div class="input-group">
+  	<div class = "panel panel-info">
+  		<div class="panel-heading">
+        <h3 class="panel-title">Your Profile</h3>
+      <br>
+	<!-- <p><h1>Your Profile</h1> <br /> -->
+		Your current email: <%= @user.email %></p>
+		</div>
+		<div style="margin:10px">
+		<%= link_to "Change your password or email", edit_user_registration_path ,class:"btn btn-default"%>
+		<br />
+		<%= render 'users/form'%>
+		</div>
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
+</div>
 </div>

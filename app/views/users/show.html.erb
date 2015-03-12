@@ -2,6 +2,13 @@
 
 <p id="notice"><%= notice %></p>
 
+
+<div>
+<!-- <%= image_tag @user.avatar.url %> -->
+<%= image_tag @user.avatar.url(:medium), class: "img-thumbnail" %>
+<!-- <%= image_tag @user.avatar.url(:thumb) %> -->
+</div>
+
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
@@ -13,9 +20,7 @@
 </p>
 
 
-<%= image_tag @user.avatar.url %>
-<%= image_tag @user.avatar.url(:medium) %>
-<%= image_tag @user.avatar.url(:thumb) %>
+
 
 
 
