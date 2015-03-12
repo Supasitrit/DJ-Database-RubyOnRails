@@ -22,12 +22,14 @@
     <p>
       <%= f.object.avatar_file_name %>
     </p>
+    <% if @user.persisted? %>
+    <%= link_to 'Remove profile photo', remove_user_photo_path %>
     <% end %>
- 
+    <% end %>
 
   
   <div class="actions">
-    <%= f.submit "Save Image", class: "btn btn-primary" %>
+    <%= f.submit "Update", class: "btn btn-primary" %>
   </div>
 <% end %>
  </div>

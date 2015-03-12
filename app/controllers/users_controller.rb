@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+
   # POST /users
   # POST /users.json
   def create
@@ -60,6 +61,13 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def remove_photo
+    @user = User.find(params[:id])
+    @user.avatar = nil
+    @user.save
+    redirect_to @user, flash: { success: 'User profile photo has been removed.' }
   end
 
   private

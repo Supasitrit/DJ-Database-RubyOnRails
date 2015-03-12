@@ -12,4 +12,6 @@ class User < ActiveRecord::Base
   	:content_type => /\Aimage\/.*\Z/
      
 	acts_as_commontator
+
+	
 end
