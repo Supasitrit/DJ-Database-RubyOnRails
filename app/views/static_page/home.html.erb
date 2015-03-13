@@ -5,15 +5,20 @@
     </div>
 </div>
 <!-- DJS -->
-<div class="jumbotron">
-	<h2> DJs </h2>
+<div class="" style="margin: 10px">
+    <div class="page-header">
+        <h2> DJs <small>
+            <a href=<%=djs_path%>>See more</a>
+        </small></h2>
+    </div>
+	
 <!-- row -->
-    <div class = "row">
+    <div class = "row" style="margin: 10px" >
         <!-- <div class="clearfix visible-xs-block"></div> -->
         <%  @djs.each do |dj| %>
         <!-- column -->
         <div class= "col-xs-12 col-sm-4" >
-            <div class="thumbnail">
+            <div class="">
             <a href = <%=dj_path(dj)%>>
             <!--<%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: auto")%>-->
             <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded" %>
@@ -28,38 +33,35 @@
           </div>
         <% end %>
     </div>
-<a href = <%=djs_path%>>
-<button type="button" class="btn btn-default btn-lg">
-	Full Dj List
-  <!--<%= link_to 'Full Dj List', djs_path %>-->
-</button>
-</a>
+
 </div>
 <!-- DJs -->
 <!-- GEARS -->
-<div class="jumbotron">
-	<h2> GEARs </h2>
+<div class="" style="margin: 10px" >
+	<div class="page-header">
+        <h2> Gears <small>
+            <a href=<%=gears_path%>>See more</a></small></h2>
+    </div>
 <!-- row -->
-    <div class = "row">
+    <div class = "row"  style="margin: 10px">
         <%  @gears.each do |gear| %>
         <!-- column -->
         <div class= "col-xs-12 col-sm-4">
-            <div class= "thumbnail">
+            <div class= "">
         	<a href = <%=gear_path(gear)%>>
             <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded " %>
             </a>
-            <strong>
+            <div class="caption">
+            <h3>
             <%= link_to gear.name, gear_path(gear) %>
-	        </strong>
+            </h3>
+            <p>Description: <br><%=gear.description %></p>
+        </div>
         </div>
     </div>
         <% end %>
 
     </div>
-<a href = <%=gears_path%>>
-<button type="button" class="btn btn-default btn-lg">
-	Full Gear List
-</button>
-</a>
+
 </div>
 <!-- GEARS -->

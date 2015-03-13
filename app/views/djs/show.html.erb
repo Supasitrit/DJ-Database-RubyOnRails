@@ -1,4 +1,6 @@
-<div class = "center jumbotron" >
+<div class="row">
+<div class="col-md-4"></div>
+  <div class="col-md-6">
 
   <p id="notice"><%= notice %></p>
 
@@ -31,15 +33,35 @@
 	<%= link_to 'Back', djs_path %>
 <% else %>
 <% end %>
+
+
+
+<div class="col-md-2"></div>
+
+
 </div>
 
-<div class = "center jumbotron">
-  <h1>Gears <%= @dj.name %> Use:</h1><br>
+</div>
+
+
+
+<div class = "">
+  <div class="page-header">
+    <h3>Gears <%= @dj.name %> Use:</h3><br>
+  </div>
+  <% if @dj.gears.count == 0 %>
+  <p> This DJ have no recorded gear. You can add one!! </p>
+  <%else%>
   <% @dj.gears.each do |gear| %>
     <h2><%= link_to gear.name, gear_path %></h2><br>
   <% end %>
+  <% end %>
+
 </div>
 
-<div class = "center jumbotron">
+<div class = "">
+  <div class="page-header">
+    <h3> Comments on this DJ</h3>
+  </div>
   <%= commontator_thread(@dj) %>
   </div>

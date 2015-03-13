@@ -1,14 +1,18 @@
 <%= simple_form_for(@gear) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :description %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true , class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description, class:"form-control"%>  
+  </div>
     <!--
     <%= f.input :geartype_id %>
     <%= f.input :dj_id %>
     -->
-  </div>
    <%= f.label :avatar %>
     <%= f.file_field :avatar, html:{class: 'center'} %>
       <% if f.object.avatar? %>
