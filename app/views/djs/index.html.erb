@@ -1,30 +1,42 @@
-<div class="center jumbotron">
-    <div style="padding-bottom:50px">
-    <h1>DJ Database</h1> 
-    <h2>Find djs and gears they use!</h2>
+<div class="">
+    <div style="">
+    
     <% if user_signed_in? %>
     <a href = <%=new_dj_path%>><button class = "btn btn-success btn-lg" >Add New Dj</button>
     </a>
     <% end %>
     </div>
 
-    <!-- row -->
-    <div class = "row">
+    <!-- DJS -->
+<div class="" style="margin: 10px">
+    <div class="page-header">
+        <h2> DJs </h2>
+    </div>
+    
+<!-- row -->
+    <div class = "row" style="margin: 10px" >
         <!-- <div class="clearfix visible-xs-block"></div> -->
         <%  @djs.each do |dj| %>
         <!-- column -->
-        <div class= "col-xs-12 col-sm-4" style="min-height: 300px">
+        <div class= "col-xs-12 col-sm-3" >
+            <div class="">
             <a href = <%=dj_path(dj)%>>
-                
             <!--<%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: auto")%>-->
-            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded img-thumbnail" %>
+            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded", style: "min-height: auto" %>
             </a>
-            <strong>
+            <div class="caption">
+            <h3>
             <%= link_to dj.name, dj_path(dj) %>
-        </strong>
+            </h3>
+            <p>Genre: <br><%=dj.genre %></p>
+        </div>
+    </div>
           </div>
         <% end %>
     </div>
+
+</div>
+<!-- DJs -->
     
     <div class="apple_pagination">
         <div class="page_info">
