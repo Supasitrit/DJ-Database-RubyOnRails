@@ -1,11 +1,13 @@
-<%= simple_form_for(@dj) do |f| %>
+<%= simple_form_for(@dj)  do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name , class: "form-control"%>
+    <%= f.input :name , class: "form-control" %>
     <%= f.input :description , class: "form-control"%>
     <%= f.input :genre , class: "form-control"%>
   </div>
+
+  
 
   <%= f.label :avatar %>
     <%= f.file_field :avatar, html:{class: 'center'} %>
