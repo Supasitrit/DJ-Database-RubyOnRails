@@ -1,6 +1,12 @@
 <div class="center jumbotron">
 	<p id="notice"><%= notice %></p>
 
+
+
+<div class="container text-center ">
+<%= image_tag @gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
+</div>
+
 <p>
   <strong>Name:</strong>
   <%= @gear.name %>

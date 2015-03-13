@@ -22,6 +22,13 @@ class GearsController < ApplicationController
   def edit
   end
 
+  def remove_photo
+    @gear = Gear.find(params[:id])
+    @gear.avatar = nil
+    @gear.save
+    redirect_to @gear, flash: { success: 'Gear profile photo has been removed.' }
+  end
+
   # POST /gears
   # POST /gears.json
   def create
@@ -70,6 +77,6 @@ class GearsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gear_params
-      params.require(:gear).permit(:name, :description, :geartype_id, :dj_id)
+      params.require(:gear).permit(:name, :description, :geartype_id, :dj_id, :avatar)
     end
 end

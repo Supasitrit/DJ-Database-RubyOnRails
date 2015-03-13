@@ -1,7 +1,6 @@
 <div class="center jumbotron">
-	<h1>Welcome to DJDB</h1>
-<p>DJDB breaks down the gear, tools, and products used by artists, pros, and influencers in their craft.</p>
-
+	<h1>Welcome to DJDB</h1>	
+	<p>DJDB breaks down the gear, tools, and products used by artists, pros, and influencers in their craft.</p>
 <!-- DJS -->
 <div class="center jumbotron">
 	<h2> DJs </h2>
@@ -36,7 +35,10 @@
     <div class = "row">
         <%  @gears.each do |gear| %>
         <!-- column -->
-        <div class= "col-xs-12 col-sm-4" >
+        <div class= "col-xs-12 col-sm-4">
+        	<a href = <%=gear_path(gear)%>>
+            <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded img-thumbnail" %>
+            </a>
             <strong>
             <%= link_to gear.name, gear_path(gear) %>
 	        </strong>

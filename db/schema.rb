@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312081853) do
+ActiveRecord::Schema.define(version: 20150312124243) do
 
   create_table "commontator_comments", force: :cascade do |t|
     t.string   "creator_type"
@@ -80,8 +80,12 @@ ActiveRecord::Schema.define(version: 20150312081853) do
     t.string   "description"
     t.integer  "geartype_id"
     t.integer  "dj_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

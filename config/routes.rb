@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   get 'dj/:id/remove_photo', 
     to: 'djs#remove_photo', 
     as: 'remove_dj_photo'  
+  get 'gear/:id/remove_photo', 
+    to: 'gears#remove_photo', 
+    as: 'remove_gear_photo'  
 
 
   # devise_for :users, controllers: {
