@@ -4,6 +4,8 @@
     <% if user_signed_in? %>
     <a href = <%=new_dj_path%>><button class = "btn btn-success btn-lg" >Add New Dj</button>
     </a>
+    <% else %>
+        <p> Log in to submit a Dj!!</p>
     <% end %>
     </div>
 
@@ -13,22 +15,22 @@
         <h2> DJs </h2>
     </div>
     
-<!-- row -->
-    <div class = "row" style="margin: 10px" >
+<!-- gallery -->
+    <div class = "container" style="margin: 10px" >
         <!-- <div class="clearfix visible-xs-block"></div> -->
         <%  @djs.each do |dj| %>
         <!-- column -->
-        <div class= "col-xs-12 col-sm-3" >
+        <div class= "col-xs-12 col-sm-2">
             <div class="">
             <a href = <%=dj_path(dj)%>>
             <!--<%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: auto")%>-->
-            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded", style: "min-height: auto" %>
+            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded", style: "margin-bottom:10px" %>
             </a>
             <div class="caption">
             <h3>
             <%= link_to dj.name, dj_path(dj) %>
             </h3>
-            <p>Genre: <br><%=dj.genre %></p>
+            <p><strong>Genre: </strong><br><%=dj.genre %></p>
         </div>
     </div>
           </div>
