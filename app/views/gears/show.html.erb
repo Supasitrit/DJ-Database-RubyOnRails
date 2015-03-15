@@ -6,7 +6,7 @@
 
 
 <div class="container text-center ">
-<%= image_tag @gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
+<%= image_tag @gear.avatar.url(:medium),class:"img-responsive img-rounded" %> Center
 </div>
 
 <p>
@@ -18,21 +18,13 @@
   <strong>Description:</strong>
   <%= @gear.description %>
 </p>
-
+<!-- 
 <p>
   <strong>Geartype:</strong>
   <%= @gear.geartype_id %>
 </p>
+ -->
 
-<p>
-  <strong>Dj:</strong>
-  <%= @gear.dj_id %>
-</p>
-<p>
-	<strong>Dj that use </strong>
-<%= @gear.name %>	<% @gear.djs.each do |dj|%>
-    <h2><%= link_to dj.name, dj_path %></h2><br>
-	<% end %>
 </p>
 <%= link_to 'Edit', edit_gear_path(@gear) %> |
 <%= link_to 'Back', gears_path %>
@@ -40,4 +32,40 @@
 
 <div class="col-md-2"></div>
 
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="container">
+  <div class="page-header">
+  <h3><strong>Dj that use </strong>
+<%= @gear.name %></h3>
+</div>  
+<% if @gear.djs.count == 0 %>
+<p> We have no record of Dj that use this product, you can add one!! </p>
+<% else %>
+<% @gear.djs.each do |dj|%>
+<div class="col-xm-12 col-sm-4">
+    <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded " %>
+    <h2><%= link_to dj.name, dj_path %></h2><br>
+    
+    <% end %>
+  <% end %>
+
+</div>
+</div> 
+
+
+
+
+<div class = "">
+  <div class="page-header">
+    <h3> Comments on this Gear</h3>
+  </div>
+  <%= commontator_thread(@gear) %>
 </div>

@@ -9,4 +9,5 @@ class Gear < ActiveRecord::Base
 	  	:default_url => "/images/:style/missing.png"
   	validates_attachment_content_type :avatar, 
   	:content_type => /\Aimage\/.*\Z/
+  	acts_as_commontable
 end
