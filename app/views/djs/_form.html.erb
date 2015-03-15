@@ -12,24 +12,22 @@
   <div class="field">
     <%= f.label :genre %><br />
     <%= f.text_field :genre,class:"form-control"%>
-  </div>
+  </div>  
 
   
 
   <%= f.label :avatar %>
-    <%= f.file_field :avatar, html:{class: 'center'} %>
-    <% if f.object.avatar? %>
-    <br />
+  <%= f.file_field :avatar, html:{class: 'center'} %>
+
+  <% if f.object.avatar? %>
+    <br/>
     <%= image_tag(f.object.avatar.url(:small)) %><br />
     <em>Currently uploaded image</em>
     <p>
       <%= f.object.avatar_file_name %>
     </p>
-    
     <%= link_to 'Remove profile photo', remove_dj_photo_path %>
-    
     <% end %>
-
 
   <div class="form-actions">
     <%= f.button :submit %>

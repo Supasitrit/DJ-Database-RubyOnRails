@@ -2,7 +2,15 @@
 
   <p id="notice"><%= notice %></p>
 
-
+  <div style="">
+    
+    <% if user_signed_in? %>
+    <a href = <%=new_gear_path%>><button class = "btn btn-success btn-lg" >Add New Gear</button>
+    </a>
+    <% else %>
+        <p> Log in to submit a gear!!</p>
+    <% end %>
+    </div>
 
 <!-- GEARS -->
 <div class="" style="margin: 10px" >
@@ -36,7 +44,7 @@
 
 <br>
 
-<%= link_to 'New Gear', new_gear_path %>
+
 
 
 </div>
