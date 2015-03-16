@@ -1,12 +1,16 @@
 <div class="row">
 <div class="col-md-4">
+<<<<<<< HEAD
   <div class="container text-center ">
 <%= image_tag @gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
+=======
+<div class="container text-center ">
+<%= image_tag @gear.avatar.url(:medium),class:"img-responsive img-rounded" %> 
+>>>>>>> building-geartype
 </div>
 </div>
   <div class="col-md-6">
 	<p id="notice"><%= notice %></p>
-
 
 
 <p>
@@ -20,9 +24,19 @@
   <%= @gear.description %>
 </p>
 
+<% if @gear.buylink? %>
+<a href= <%=@gear.buylink%> ><button class="btn btn-success">BUY NOW</button></a>
+<%else%>
+<% end %>
+<!-- 
+<p>
+  <strong>Geartype:</strong>
+  <%= @gear.geartype_id %>
 </p>
-<%= link_to 'Edit', edit_gear_path(@gear) %> |
-<%= link_to 'Back', gears_path %>
+ -->
+
+<%= link_to 'Improve this page!!', edit_gear_path(@gear) %> <!-- |
+<%= link_to 'Back', gears_path %> -->
 
 
 <div class="col-md-2"></div>

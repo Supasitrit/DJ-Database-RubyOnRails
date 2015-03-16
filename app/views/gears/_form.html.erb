@@ -7,13 +7,13 @@
   </div>
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_field :description, class:"form-control"%>  
+    <%= f.text_area :description, class:"form-control"%>  
   </div>
-    <!--
-    <%= f.input :geartype_id %>
-    <%= f.input :dj_id %>
-    -->
-   <%= f.label :avatar %>
+  <div class="field">
+    <%= f.label :buy_link %>
+    <%= f.text_field :buylink, class:"form-control"%>  
+  </div>
+   <%= f.label :gear_picture %>
     <%= f.file_field :avatar, html:{class: 'center'} %>
       <% if f.object.avatar? %>
       <br />
@@ -24,7 +24,7 @@
       
   <% end %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions ">
+    <%= f.button :submit, class:"btn btn-success col-sm-12" %>
   </div>
 <% end %>
