@@ -17,7 +17,15 @@
  /*
  *= require bootstrap-material-design
  */
-
  
+/*
+*= require 'masonry/basic'
+*= require 'masonry/centered'
+*= require 'masonry/fluid'
+*= require 'masonry/gutters'
+*= require 'masonry/infinitescroll'
+*= require 'masonry/right-to-left'
+*= require 'masonry/transitions'
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";

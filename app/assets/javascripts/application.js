@@ -14,4 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
 //= require bootstrap-material-design
+
+
+//= require masonry/jquery.masonry
+// Optional
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+// Content generation helpers
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+// All isotope scripts are in the isotope folder
+//= require isotope/jquery.isotope

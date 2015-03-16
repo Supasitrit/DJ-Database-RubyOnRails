@@ -18,10 +18,10 @@
         <h2> Gears </h2>
     </div>
 <!-- row -->
-    <div class = "container"  style="margin: 10px">
+    <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
         <%  @gears.each do |gear| %>
         <!-- column -->
-        <div class= "col-xs-12 col-sm-2 container " style="position: relative;">
+        <div class= "box col3" >
         <div class= "">
           <a href = <%=gear_path(gear)%>>
             <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded ",style:"margin-buttom:10px" %>

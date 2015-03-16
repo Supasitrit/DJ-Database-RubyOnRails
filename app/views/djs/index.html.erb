@@ -16,10 +16,10 @@
     </div>
     
 <!-- gallery -->
-    <div id="container" >
+    <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" >
         <%  @djs.each do |dj| %>
         <!-- column -->
-        <div class= "col-xm-12 col-md-2">
+        <div class= "box col2">
             <div class="">
             <a href = <%=dj_path(dj)%>>
             <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded", style: "margin-bottom:10px" %>

@@ -25,6 +25,9 @@ gem 'bootstrap-material-design'
 # paperclip
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # 
+# masonry
+gem 'masonry-rails'
+# 
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
 	# gem 'byebug'
