@@ -29,8 +29,10 @@ group :development, :test do
 	# gem 'byebug'
 	gem 'web-console', '~> 2.0'
 	gem 'spring'
+	gem 'annotate', '~> 2.6.6'
+	gem 'better_errors'
 end
 group :development, :test do
-	gem 'annotate', '~> 2.6.6'
+	
 end
 
