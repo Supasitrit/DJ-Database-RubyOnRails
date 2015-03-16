@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'dj' => 'djs#index'
   get 'djresult' => 'djs#result'
   get 'gearresult' => 'gears#result'
+  get 'djgear' => 'djs#djgear'
   get 'user/:id/remove_photo', 
     to: 'users#remove_photo', 
     as: 'remove_user_photo'

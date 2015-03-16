@@ -1,0 +1,40 @@
+<div  style="margin-top:70px">
+  
+
+
+
+  
+
+
+
+
+
+
+  <div class="list-group">
+
+    <%  @djs.each do |dj| %>
+
+    <a href=<%= dj_path(dj)%> class="list-group-item list-group-item-success">
+      <%= dj.name %></a>
+    <% end %>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="list-group">
+    <%  @gears.each do |gear| %>
+      <a href=<%= gear_path(gear)%> class="list-group-item list-group-item-info">
+        <%= gear.name %></a>
+  
+  <% end %>
+
+  </div>
+
+
+  
+</div>

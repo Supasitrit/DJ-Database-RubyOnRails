@@ -36,6 +36,11 @@ class DjsController < ApplicationController
     @gears = Gear.all
   end
 
+  def djgear
+    @gears = Gear.all 
+    @djs = Dj.all
+  end
+
   # GET /djs/new
   def new
     @dj = Dj.new

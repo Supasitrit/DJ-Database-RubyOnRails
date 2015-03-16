@@ -32,7 +32,9 @@
 </p> -->
 <% if user_signed_in? %>
 	<%= link_to 'Destroy', @dj, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<%= link_to 'Improve This Page!', edit_dj_path(@dj) %> <!-- |
+	<%= link_to 'Improve This Page!', edit_dj_path(@dj) %>
+  <%= link_to 'COMEEELKNDF:LDFLDFJ:DLFJ:D!', djgear_path(@dj) %>
+   <!-- |
 	<%= link_to 'Back', djs_path %> -->
 <% else %>
 <% end %>
@@ -51,7 +53,7 @@
 <div class = "container jumbotron">
   <div class="page-header">
     <h3>Gears <%= @dj.name %> Use:</h3><br>
-    <button class="btn btn-success">Submit a gear the <%=@dj.name%> use</button>
+    <a href=<%= djgear_path(@dj)%> class="btn btn-success" role="button">Submit a gear the <%=@dj.name%> use</a>
   </div>
   
 
@@ -84,6 +86,13 @@
 
 
 
+
+
+
+
+
+
+
 <div class = "js-masonry jumbotron">
   <div class="page-header">
     <h3> Comments on this DJ</h3>
@@ -102,23 +111,3 @@
 
 
 
-
-
-<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-    <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-
-  <div class="box col3">
-    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p>
-      </div>
-
-  <div class="box col1">
-    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p>
-  </div>
-
-  <div class="box col2">
-    <p>
-      <a href="http://www.flickr.com/photos/nemoorange/3319714470/" title="Whitlow's on Wilson by nemoorange, on Flickr"><img src="http://farm4.static.flickr.com/3008/3319714470_c05a5cb5a8_m.jpg" alt="Whitlow's on Wilson" /></a>
-    </p>
-  </div>
-  ...
-</div>
