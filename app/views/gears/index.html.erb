@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron"style="margin-top:50px">
 
   <p id="notice"><%= notice %></p>
 
@@ -21,8 +21,8 @@
     <div class = "container"  style="margin: 10px">
         <%  @gears.each do |gear| %>
         <!-- column -->
-        <div class= "col-xs-12 col-sm-2">
-            <div class= "">
+        <div class= "col-xs-12 col-sm-2 container jumbotron" style="position: relative;">
+        <div class= "">
           <a href = <%=gear_path(gear)%>>
             <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded ",style:"margin-buttom:10px" %>
             </a>

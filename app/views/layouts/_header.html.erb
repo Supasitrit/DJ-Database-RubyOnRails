@@ -1,5 +1,5 @@
-<!--<header class="navbar navbar-fixed-top navbar-inverse " id = "header" > -->
-  <nav class="navbar navbar-inverse">
+<!-- <header class="navbar navbar-fixed-top navbar-inverse" style="margin-buttom:50px"id = "header" > -->
+  <nav class="navbar navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
     <div class = "navbar-header">
       <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse">
@@ -64,16 +64,34 @@
         function gear(){
           $("#djsearch").hide()
           $("#gearsearch").show()
+          $("#hidbutton").show()
         }
         function dj(){
           $("#djsearch").show()
           $("#gearsearch").hide()
+          $("#hidbutton").show()
         }
         $(function(){
-          console.log("HWOO")
             $("#gearsearch").hide()
+            $("#djsearch").hide()
+            $("#hidbutton").hide()
         })
+        function hideall(){
+          $("#gearsearch").hide()
+          $("#djsearch").hide()
+          $("#hidbutton").hide()
+          console.log("come on")
+        }
       </script>
+      <button class="btn btn-info" onclick=dj()>
+        Search for DJ
+      </button>
+      <button class="btn btn-danger" onclick=gear()>
+        Search for GEAR
+      </button>
+      <button class="btn btn-warning" onclick=hideall() id="hidbutton">
+        Close
+      </button>
       <div id="djsearch">
         <%= form_tag(djresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
         <div class="form-group">
@@ -92,12 +110,7 @@
         </div>
       </div>
 
-      <button class="btn btn-info" onclick=dj()>
-        Search for DJ
-      </button>
-      <button class="btn btn-danger" onclick=gear()>
-        Search for GEAR
-      </button>
+      
 
 </ul>
 
@@ -105,4 +118,4 @@
     </div>
   </div>
 </nav>
-<!-- </header>-->
+ <!-- </header> -->

@@ -4,7 +4,7 @@
 
 
 <% if current_user.id == @user.id%>
-<div class="row">
+<div class="row" style="margin-top:50px">
 	<div class="col-md-4"></div>
   		<div class="col-md-6">
 			<div class="input-group">
@@ -12,7 +12,7 @@
   					<div class="panel-heading">
         				<h3 class="panel-title">Your Profile</h3>
       					<br>
-	<!-- <p><h1>Your Profile</h1> <br /> -->
+					<!-- <p><h1>Your Profile</h1> <br /> -->
 					Your current email: <%= @user.email %></p>
 					</div>
 						<div style="margin:10px">
@@ -27,6 +27,8 @@
 			</div>
 		</div>
 </div>
+
+
 <% else %>
 
 <h1> YOU CANNOT EDIT OTHER USER'S PROFILE </h1>

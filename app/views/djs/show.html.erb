@@ -1,4 +1,4 @@
-<div class="row jumbotron">
+<div class="row jumbotron"  style="margin-top:50px">
 <div class="col-md-4">
 <div class="container ">
 
@@ -26,10 +26,10 @@
   <%= @dj.genre %>
 </p>
 
-<p>
+<!-- <p>
   <strong>ID:</strong>
   <%= @dj.id %>
-</p>
+</p> -->
 <% if user_signed_in? %>
 	<%= link_to 'Destroy', @dj, method: :delete, data: { confirm: 'Are you sure?' } %>
 	<%= link_to 'Improve This Page!', edit_dj_path(@dj) %> <!-- |
@@ -51,10 +51,15 @@
 <div class = "container jumbotron">
   <div class="page-header">
     <h3>Gears <%= @dj.name %> Use:</h3><br>
+    <button class="btn btn-success">Submit a gear the <%=@dj.name%> use</button>
   </div>
+  
+
   <% if @dj.gears.count == 0 %>
+  
   <p> This DJ have no recorded gear. You can add one!! </p>
   <%else%>
+
   <% @dj.gears.each do |gear| %>
   <div class= "col-xs-12 col-sm-4">
             <div class= "">
