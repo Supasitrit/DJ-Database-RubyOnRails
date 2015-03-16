@@ -13,6 +13,15 @@ class GearsController < ApplicationController
     @gears = Gear.all
   end
 
+   def result
+    if params[:search]
+      @gears = Gear.search(params[:search]).order("created_at DESC")
+    else
+      @gears = Gear.order("created_at DESC")
+    end
+  end
+
+
   # GET /gears/new
   def new
     @gear = Gear.new

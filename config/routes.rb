@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_page#contact'
   get 'dj' => 'djs#index'
   get 'djresult' => 'djs#result'
+  get 'gearresult' => 'gears#result'
   get 'user/:id/remove_photo', 
     to: 'users#remove_photo', 
     as: 'remove_user_photo'

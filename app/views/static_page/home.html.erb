@@ -1,15 +1,15 @@
 
-    <div class="container" style="">
+    <div class="container jumbotron" style="">
     	<h1><strong>Welcome to DJ Database</strong> </h1>
     <h2>Find djs and gears they use!</h2>
 
 </div>
 
 <!-- DJS -->
-<div class="" style="margin: 10px">
+<div class="jumbotron" style="margin: 10px">
     <div class="page-header">
         <h2> DJs <small>
-            <a href=<%=djs_path%>>See more</a>
+            <a href=<%=djs_path%> class="btn btn-info" role="button">See more</a>
         </small></h2>
     </div>
 	
@@ -28,7 +28,7 @@
             <h3>
             <%= link_to dj.name, dj_path(dj) %>
             </h3>
-            <p>Genre: <br><%=dj.genre %></p>
+            <!-- <p>Genre: <br><%=dj.genre %></p> -->
         </div>
     </div>
           </div>
@@ -38,10 +38,10 @@
 </div>
 <!-- DJs -->
 <!-- GEARS -->
-<div class="" style="margin: 10px" >
+<div class="jumbotron" style="margin: 10px" >
 	<div class="page-header">
         <h2> Gears <small>
-            <a href=<%=gears_path%>>See more</a></small></h2>
+            <a href=<%=gears_path%> class="btn btn-info" role="button">See more</a></small></h2>
     </div>
 <!-- row -->
     <div class = "row"  style="margin: 10px">

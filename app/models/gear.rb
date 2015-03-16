@@ -11,4 +11,9 @@ class Gear < ActiveRecord::Base
   	validates_attachment_content_type :avatar, 
   	:content_type => /\Aimage\/.*\Z/
   	acts_as_commontable
+
+  	def self.search(query)
+    # where(:title, query) -> This would return an exact match of the query
+    where("name like ?", "%#{query}%") 
+  end
 end

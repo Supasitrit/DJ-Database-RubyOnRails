@@ -2,7 +2,6 @@ class Dj < ActiveRecord::Base
 	require 'will_paginate/array'
 	has_many :djs_gears
 	has_many :gears, through: :djs_gears
-	# has_and_belongs_to_many :gears, :join_table => "djs_gears"
 	has_attached_file :avatar, :styles => { 
   		:medium => "300x300>",
   		:small => "140x140", 
@@ -13,8 +12,6 @@ class Dj < ActiveRecord::Base
 
 
 	acts_as_commontable
-	# has_one :page
-	# attr_accessible :title, :content
  
  #  validates :title, presence: true, uniqueness: true
  #  validates :content, presence: true
