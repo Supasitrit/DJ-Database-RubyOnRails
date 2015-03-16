@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :geartypes
+
   resources :gears
 
   mount Commontator::Engine => '/commontator'
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
   get 'gear/:id/remove_photo', 
     to: 'gears#remove_photo', 
     as: 'remove_gear_photo'  
-
+  
 
   # devise_for :users, controllers: {
   #   sessions: 'sessions'

@@ -1,0 +1,12 @@
+<%= simple_form_for(@geartype) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true , class:"form-control"%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
