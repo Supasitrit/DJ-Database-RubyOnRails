@@ -1,13 +1,15 @@
 <div class="row">
-<div class="col-md-4"></div>
-  <div class="col-md-6">
-
-  <p id="notice"><%= notice %></p>
-
+<div class="col-md-4">
 <div class="container text-center ">
 <!--<%= image_tag( @dj.name+".jpg", :alt => "djs-images",class:"img-responsive img-rounded") %> -->
 <%= image_tag @dj.avatar.url(:medium),class:"img-responsive img-rounded" %>
 </div>
+</div>
+  <div class="col-md-6">
+
+  <p id="notice"><%= notice %></p>
+
+
 <h1>
   <strong>
   <%= @dj.name %>
@@ -17,6 +19,7 @@
 <p>
   <strong>Description:</strong>
   <%= @dj.description %>
+  
 </p>
 
 <p>
@@ -29,8 +32,8 @@
 </p>
 <% if user_signed_in? %>
 	<%= link_to 'Destroy', @dj, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<%= link_to 'Edit', edit_dj_path(@dj) %> |
-	<%= link_to 'Back', djs_path %>
+	<%= link_to 'Improve This Page!', edit_dj_path(@dj) %> <!-- |
+	<%= link_to 'Back', djs_path %> -->
 <% else %>
 <% end %>
 

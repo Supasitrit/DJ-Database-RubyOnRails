@@ -4,7 +4,7 @@ class GearsController < ApplicationController
   # GET /gears
   # GET /gears.json
   def index
-    @gears = Gear.all
+    @gears = Gear.paginate(:page => params[:page], :per_page => 12)
   end
 
   # GET /gears/1
@@ -77,6 +77,6 @@ class GearsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gear_params
-      params.require(:gear).permit(:name, :description, :geartype_id, :dj_id, :avatar)
+      params.require(:gear).permit(:name, :description, :geartype_id, :dj_id, :avatar, :buylink)
     end
 end

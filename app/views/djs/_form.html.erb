@@ -7,7 +7,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description,class:"form-control"%>
+    <%= f.text_area :description,class:"form-control"%>
   </div>
   <div class="field">
     <%= f.label :genre %><br />
@@ -15,21 +15,21 @@
   </div>  
 
   
-
-  <%= f.label :avatar %>
-  <%= f.file_field :avatar, html:{class: 'center'} %>
-
+  <div class="container">
+  <%= f.label :DJ_picture %>
+    <%= f.file_field :avatar, html:{class: 'center'} %>
   <% if f.object.avatar? %>
     <br/>
     <%= image_tag(f.object.avatar.url(:small)) %><br />
     <em>Currently uploaded image</em>
-    <p>
-      <%= f.object.avatar_file_name %>
-    </p>
-    <%= link_to 'Remove profile photo', remove_dj_photo_path %>
-    <% end %>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+    <p><%= f.object.avatar_file_name %></p>
+    <%= link_to 'Remove profile photo', remove_dj_photo_path %><br>
+  <% end %>
   </div>
+
+
+  <div class="form-actions ">
+    <%= f.button :submit, class:"btn btn-success col-sm-12" %>
+  </div>
+
 <% end %>

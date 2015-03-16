@@ -2,6 +2,7 @@
     <div class="container" style="">
     	<h1><strong>Welcome to DJ Database</strong> </h1>
     <h2>Find djs and gears they use!</h2>
+
 </div>
 
 <!-- DJS -->
@@ -46,16 +47,16 @@
     <div class = "row"  style="margin: 10px">
         <%  @gears.each do |gear| %>
         <!-- column -->
-        <div class= "col-xs-12 col-sm-4">
+        <div class= "col-xs-12 col-sm-3">
             <div class= "">
         	<a href = <%=gear_path(gear)%>>
-            <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded " %>
+            <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded ",style:"margin:20px" %>
             </a>
             <div class="caption">
             <h3>
             <%= link_to gear.name, gear_path(gear) %>
             </h3>
-            <p>Description: <br><%=gear.description %></p>
+            
         </div>
         </div>
     </div>
