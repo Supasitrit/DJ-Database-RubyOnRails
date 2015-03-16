@@ -197,11 +197,8 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.6.6)
-
   better_errors
-
   bootstrap-material-design
-
   bootstrap-sass (~> 3.3.3)
   coffee-rails (~> 4.1.0)
   commontator (~> 4.10.0)
