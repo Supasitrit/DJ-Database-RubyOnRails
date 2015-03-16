@@ -1,4 +1,4 @@
-<div class="jumbotron "style="margin-top:50px">
+<div class="jumbotron "style="margin-top:70px">
 
     <div style="">
     <% if user_signed_in? %>
@@ -10,20 +10,18 @@
     </div>
 
     <!-- DJS -->
-<div class="" style="margin: 10px">
+<div class="container" style="margin: 10px">
     <div class="page-header">
         <h2> DJs </h2>
     </div>
     
 <!-- gallery -->
-    <div class = "container" style="margin: 10px" >
-        <!-- <div class="clearfix visible-xs-block"></div> -->
+    <div id="container" >
         <%  @djs.each do |dj| %>
         <!-- column -->
-        <div class= "col-xs-12 col-sm-2 container jumbotron">
+        <div class= "col-xm-12 col-md-2">
             <div class="">
             <a href = <%=dj_path(dj)%>>
-            <!--<%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: auto")%>-->
             <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded", style: "margin-bottom:10px" %>
             </a>
             <div class="caption">
