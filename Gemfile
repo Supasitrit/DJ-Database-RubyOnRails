@@ -21,6 +21,7 @@ gem 'will_paginate', '~> 3.0.5'
 # commontator for comment
 gem 'commontator', '~> 4.10.0'
 # 
+gem 'bootstrap-material-design'
 # paperclip
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # 
