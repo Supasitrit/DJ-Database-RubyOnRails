@@ -1,0 +1,43 @@
+<div style="margin-top:100px">
+  <p id="notice"><%= notice %></p>
+
+<h1>Listing Djs Gears</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @djs_gears.each do |djs_gear| %>
+      <tr>
+        <td>DJ id</td>
+        <td><%= djs_gear.dj_id%></td>
+        <td>Gear id</td>
+        <td><%= djs_gear.gear_id%></td>
+
+
+
+
+        <td><%= link_to 'Show', djs_gear %></td>
+        <td><%= link_to 'Edit', edit_djs_gear_path(djs_gear) %></td>
+        <td><%= link_to 'Destroy', djs_gear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+
+
+
+
+
+
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Djs gear', new_djs_gear_path %>
+</div>

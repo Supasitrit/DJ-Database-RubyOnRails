@@ -1,0 +1,42 @@
+<!--<%= simple_form_for(@djs_gear) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>-->
+
+
+
+
+<%= form_for(@djs_gear) do |f| %>
+<%= f.hidden_field :dj_id, value: params[:dj_id] %>
+<!-- <%= f.hidden_field :gear_id, value: params[:gear_id] %> -->
+
+
+
+
+
+<h4> <%= @dj.name %></h4>
+<p> <%= @dj.id %></p>
+
+
+
+ <div class="field">
+    <%= f.label :gear_id %><br />
+    <%= f.text_field :gear_id, autofocus: true , class:"form-control"%>
+ </div>
+
+
+
+
+
+<div class="form-actions">
+    <%= f.button :submit %>
+</div>
+
+// select dj gear
+<% end %>
