@@ -1,40 +1,36 @@
-<div  style="margin-top:70px">
-  
 
 
-
-  
-
-
-
-
-
-
-  <div class="list-group">
-
-    <%  @djs.each do |dj| %>
-
-    <a href=<%= dj_path(dj)%> class="list-group-item list-group-item-success">
-      <%= dj.name %></a>
-    <% end %>
-
-  </div>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-3">
+<div  class="dropdown" style="margin-top:100px">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+<ul class="dropdown-menu">
+    // showing a dj here
+  </ul>
+</div>
+</div>
 
 
-
-
-
-
-
-  <div class="list-group">
+<div class="col-md-3">
+<div  class="dropdown" style="margin-top:100px">  
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
     <%  @gears.each do |gear| %>
-      <a href=<%= gear_path(gear)%> class="list-group-item list-group-item-info">
+      <a href=<%= gear_path(gear)%> class="list-group-item list-group-item-info" role="menuitem">
         <%= gear.name %></a>
-  
   <% end %>
+  </ul>
+</div>
+</div>
 
-  </div>
+<div class="col-md-3"></div>
 
 
-  
 </div>

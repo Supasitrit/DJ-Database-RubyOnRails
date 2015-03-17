@@ -38,8 +38,10 @@ class DjsController < ApplicationController
 
   def djgear
     @gears = Gear.all 
-    @djs = Dj.all
+    @dj = Dj.find(params[:dj_id].to_i)
   end
+
+  
 
   # GET /djs/new
   def new
