@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :users    
   resources :djs
   resources :users
+  resources :djsgear
   # root 'djs#index'
   root 'static_page#home'
   get 'about' => 'static_page#about'

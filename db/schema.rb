@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316064633) do
+ActiveRecord::Schema.define(version: 20150317062059) do
 
   create_table "commontator_comments", force: :cascade do |t|
     t.string   "creator_type"
@@ -73,6 +73,11 @@ ActiveRecord::Schema.define(version: 20150316064633) do
     t.integer  "gear_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "djsgears", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "gears", force: :cascade do |t|
