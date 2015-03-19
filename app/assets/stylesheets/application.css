@@ -29,9 +29,5 @@
 */
 
 
-
-/*
-*= require select2-bootstrap
-*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
