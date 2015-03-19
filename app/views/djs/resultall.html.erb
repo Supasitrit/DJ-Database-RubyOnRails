@@ -1,0 +1,47 @@
+<div class="center jumbotron" style="margin-top:50px">
+    <h1>Search Result for Dj</h1> 
+
+    <!-- row -->
+    <div class = "container row">
+        <div class="clearfix visible-xs-block"></div>
+        <%  @djs.each do |dj| %>
+        <!-- column -->        
+        <div class= "col-xs-6 col-sm-2">
+            <a href = <%=dj_path(dj)%>>
+            <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded" %>
+            
+            <div class="caption">
+                <h3>
+                <%= link_to dj.name, dj_path(dj) %>
+                </h3>
+                
+            </div>
+            </a>
+          </div>
+        <% end %>
+    </div>
+    </div>
+
+<div class="center jumbotron" style="margin-top:50px">
+    <h1>Search Result for Gear</h1> 
+
+    <!-- row -->
+    <div class = "container row">
+        <div class="clearfix visible-xs-block"></div>
+        <%  @gears.each do |gear| %>
+        <!-- column -->        
+        <div class= "col-xs-6 col-sm-2">
+            <a href = <%=gear_path(gear)%>>
+            <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
+            
+            <div class="caption">
+                <h3>
+                <%= link_to gear.name, gear_path(gear) %>
+                </h3>
+                
+            </div>
+            </a>
+          </div>
+        <% end %>
+    </div>
+    </div>

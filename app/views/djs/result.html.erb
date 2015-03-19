@@ -20,26 +20,3 @@
           </div>
         <% end %>
     </div>
-    
-<div class="center jumbotron" style="margin-top:50px">
-    <h1>Search Result</h1> 
-
-    <!-- row -->
-    <div class = "container row">
-        <div class="clearfix visible-xs-block"></div>
-        <%  @gears.each do |gear| %>
-        <!-- column -->        
-        <div class= "col-xs-6 col-sm-2">
-            <a href = <%=gear_path(gear)%>>
-            <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
-            
-            <div class="caption">
-                <h3>
-                <%= link_to gear.name, gear_path(gear) %>
-                </h3>
-                
-            </div>
-            </a>
-          </div>
-        <% end %>
-    </div>

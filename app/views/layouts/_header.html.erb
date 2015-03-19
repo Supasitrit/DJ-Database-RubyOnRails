@@ -60,39 +60,54 @@
 
 
 <ul class="nav navbar-nav navbar-right">
-      <!--<script>
+      <script>
         function gear(){
           $("#djsearch").hide()
           $("#gearsearch").show()
           $("#hidbutton").show()
+          $("#allsearch").hide()
         }
         function dj(){
           $("#djsearch").show()
           $("#gearsearch").hide()
+          $("#hidbutton").show()
+          $("#allsearch").hide()
+        }
+        function both(){
+          $("#djsearch").hide()
+          $("#gearsearch").hide()
+          $("#allsearch").show()
           $("#hidbutton").show()
         }
         $(function(){
             $("#gearsearch").hide()
             $("#djsearch").hide()
             $("#hidbutton").hide()
+            $("#allsearch").hide()
         })
         function hideall(){
           $("#gearsearch").hide()
           $("#djsearch").hide()
           $("#hidbutton").hide()
+          $("#allsearch").hide()
           console.log("come on")
         }
-      </script>-->
-      <!-- <button class="btn btn-info" onclick=dj()>
-        Search for DJ
-      </button>
-      <button class="btn btn-danger" onclick=gear()>
-        Search for GEAR
-      </button>
+      </script>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Search for ... <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu" style="color:black">
+          <li onclick=dj()><a>Search for DJ</a></li>
+          <li onclick=gear()><a>Search for GEAR</a></li>
+          <li onclick=both()><a>Search for all</a></li>
+        </ul>
+      </li>
+
+     
       <button class="btn btn-warning" onclick=hideall() id="hidbutton">
         Close
-      </button> -->
-      <!-- <div id="djsearch">
+      </button>
+      <div id="djsearch">
         <%= form_tag(djresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
         <div class="form-group">
           <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter DJ name" %>
@@ -108,28 +123,17 @@
           <button class="btn btn-danger" type="submit">Search!</button>
           <% end %>
         </div>
-      </div> -->
-      
-    <li role="presentation"> 
-      
-    </li>
-
-      <li role="presentation">
-        <div id="onesearch">
-        <%= form_tag(djresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
+      </div>
+      <div id = "allsearch">
+      <%= form_tag(allresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
         <div class="form-group">
-            
-          <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter Dj/Gear name" %>
-          <button class="btn btn-info" type="submit">Search!</button>
+
+          <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter name" %>
+          <button class="btn btn-danger" type="submit">Search!</button>
           <% end %>
         </div>
       </div>
-    </li>
-<select  id="selecttwo"style="color:black">
-              <option value="All">Both</option>
-              <option value="dj">Dj</option>
-              <option value="gear">Gear</option>
-</select>
+
       
 
 </ul>

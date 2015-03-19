@@ -21,6 +21,14 @@ class DjsController < ApplicationController
       @djs = Dj.order("created_at DESC")
     end
   end
+  def resultall
+    if params[:search]
+      @djs = Dj.search(params[:search]).order("created_at DESC")
+      @gears = Gear.search(params[:search]).order("created_at DESC")
+    else
+      @djs = Dj.order("created_at DESC")
+    end
+  end
 
   def remove_photo
     @dj = Dj.find(params[:id])
