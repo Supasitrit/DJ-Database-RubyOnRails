@@ -1,5 +1,5 @@
-<!-- <header class="navbar navbar-fixed-top navbar-inverse" style="margin-buttom:50px"id = "header" > -->
-  <nav class="navbar navbar-fixed-top navbar-success">
+
+  <nav class="navbar navbar-fixed-top navbar-success" id="header-wrap" style="margin-bottom:auto" >
   <div class="container-fluid">
     <div class = "navbar-header">
       <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse">
@@ -60,7 +60,7 @@
 
 
 <ul class="nav navbar-nav navbar-right">
-      <script>
+      <!--<script>
         function gear(){
           $("#djsearch").hide()
           $("#gearsearch").show()
@@ -82,8 +82,8 @@
           $("#hidbutton").hide()
           console.log("come on")
         }
-      </script>
-      <button class="btn btn-info" onclick=dj()>
+      </script>-->
+      <!-- <button class="btn btn-info" onclick=dj()>
         Search for DJ
       </button>
       <button class="btn btn-danger" onclick=gear()>
@@ -91,8 +91,8 @@
       </button>
       <button class="btn btn-warning" onclick=hideall() id="hidbutton">
         Close
-      </button>
-      <div id="djsearch">
+      </button> -->
+      <!-- <div id="djsearch">
         <%= form_tag(djresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
         <div class="form-group">
           <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter DJ name" %>
@@ -108,7 +108,31 @@
           <button class="btn btn-danger" type="submit">Search!</button>
           <% end %>
         </div>
+      </div> -->
+      <script>
+        $(function() {
+          $(".js-example-basic-single").select2();
+        });
+      </script>
+    <li role="presentation"> 
+      
+    </li>
+
+      <li role="presentation">
+        <div id="onesearch">
+        <%= form_tag(djresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
+        <div class="form-group">
+          <select class="js-example-basic-single" style="color:black">
+            <option value="All">Both</option>
+            <option value="dj">Dj</option>
+            <option value="gear">Gear</option>
+          </select>
+          <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter Dj/Gear name" %>
+          <button class="btn btn-info" type="submit">Search!</button>
+          <% end %>
+        </div>
       </div>
+    </li>
 
       
 
@@ -118,4 +142,3 @@
     </div>
   </div>
 </nav>
- <!-- </header> -->

@@ -16,6 +16,7 @@ class DjsController < ApplicationController
   def result
     if params[:search]
       @djs = Dj.search(params[:search]).order("created_at DESC")
+      @gears = Gear.search(params[:search]).order("created_at DESC")
     else
       @djs = Dj.order("created_at DESC")
     end
