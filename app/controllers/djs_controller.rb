@@ -9,6 +9,8 @@ class DjsController < ApplicationController
     # @djs = Dj.paginate(:page => params[:page])
     
     @djs = Dj.paginate(:page => params[:page], :per_page => 12)
+
+    
     
 
   end
