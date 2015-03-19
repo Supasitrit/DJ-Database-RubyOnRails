@@ -1,5 +1,5 @@
-
-  <nav class="navbar navbar-fixed-top navbar-success" id="header-wrap" style="margin-bottom:auto" >
+<div class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar-inner " id="header-wrap" style="margin-bottom:auto" >
   <div class="container-fluid">
     <div class = "navbar-header">
       <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse">
@@ -50,65 +50,25 @@
           <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Create Account",new_user_registration_path %></li>
         <% end %>
-      </ul>
 
-
-
-      
-
-      
-
-
-<ul class="nav navbar-nav navbar-right">
-      <script>
-        
-      </script>
-
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Search for ... <span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu" style="color:black">
-          <li onclick=dj()><a>Search for DJ</a></li>
-          <li onclick=gear()><a>Search for GEAR</a></li>
-          <li onclick=both()><a>Search for all</a></li>
-        </ul>
-      </li>
-
-     
-      <button class="btn btn-warning" onclick=hideall() id="hidbutton">
-        Close
-      </button>
-      <div id="djsearch">
-        <%= form_tag(djresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
-        <div class="form-group">
-          <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter DJ name" %>
-          <button class="btn btn-info" type="submit">Search!</button>
-          <% end %>
-        </div>
-      </div>
-      <div id = "gearsearch">
-      <%= form_tag(gearresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
-        <div class="form-group">
-
-          <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter Gear name" %>
-          <button class="btn btn-danger" type="submit">Search!</button>
-          <% end %>
-        </div>
-      </div>
-      <div id = "allsearch">
+      <li>
+      <div id = "allsearch" class="navbar-right">
       <%= form_tag(allresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
         <div class="form-group">
 
-          <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter name" %>
-          <button class="btn btn-danger" type="submit">Search!</button>
+          <%= text_field_tag :search, params[:search],style: "color:black", placeholder: "Search ..." %>
           <% end %>
         </div>
       </div>
+    </li>
 
+
+      </ul>
       
-
-</ul>
-
 
     </div>
   </div>
 </nav>
+</div>
+
+
