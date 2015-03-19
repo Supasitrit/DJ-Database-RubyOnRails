@@ -109,11 +109,7 @@
           <% end %>
         </div>
       </div> -->
-      <script>
-        $(function() {
-          $(".js-example-basic-single").select2();
-        });
-      </script>
+      
     <li role="presentation"> 
       
     </li>
@@ -122,18 +118,18 @@
         <div id="onesearch">
         <%= form_tag(djresult_path, :method => "get", class: "container navbar-form navbar-right", role:"serach") do %>
         <div class="form-group">
-          <select class="js-example-basic-single" style="color:black">
-            <option value="All">Both</option>
-            <option value="dj">Dj</option>
-            <option value="gear">Gear</option>
-          </select>
+            
           <%= text_field_tag :search, params[:search], class: "form-controller",style: "color:black", placeholder: "Enter Dj/Gear name" %>
           <button class="btn btn-info" type="submit">Search!</button>
           <% end %>
         </div>
       </div>
     </li>
-
+<select  id="selecttwo"style="color:black">
+              <option value="All">Both</option>
+              <option value="dj">Dj</option>
+              <option value="gear">Gear</option>
+            </select>
       
 
 </ul>

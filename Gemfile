@@ -28,6 +28,9 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # masonry
 gem 'masonry-rails'
 # 
+# select2
+gem "select2-rails"
+# 
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
 	gem 'byebug'

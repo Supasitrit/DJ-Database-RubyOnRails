@@ -29,3 +29,9 @@
 //= require masonry/jquery.loremimages.min
 // All isotope scripts are in the isotope folder
 //= require isotope/jquery.isotope
+
+
+
+
+// select2
+//= require select2

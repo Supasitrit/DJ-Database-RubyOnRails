@@ -27,5 +27,11 @@
 *= require 'masonry/right-to-left'
 *= require 'masonry/transitions'
 */
+
+
+
+/*
+*= require select2-bootstrap
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
