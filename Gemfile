@@ -28,9 +28,6 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # masonry external js
 gem 'masonry-rails'
 # 
-# alphabetical_paginate
-gem 'alphabetical_paginate'
-# 
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
