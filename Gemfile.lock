@@ -46,7 +46,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    alphabetical_paginate (2.2.3)
     annotate (2.6.6)
       activerecord (>= 2.3.0)
       rake (~> 10.4.2, >= 10.4.2)
@@ -206,7 +205,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alphabetical_paginate
   annotate (~> 2.6.6)
   better_errors
   bootstrap-material-design
