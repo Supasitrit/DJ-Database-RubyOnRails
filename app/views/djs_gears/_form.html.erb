@@ -14,11 +14,10 @@
 
 <%= form_for(@djs_gear) do |f| %>
 <%= f.hidden_field :dj_id, value: params[:dj_id] %>
-<!-- <%= f.hidden_field :gear_id, value: params[:gear_id] %> -->
+<%= f.hidden_field :gear_id, value: params[:gear_id] %>
 
 
-<h4> <%= @dj.name %></h4>
-<p> <%= @dj.id %></p>
+<h2>Dj: <%= @dj.name %></h2>
 
 
 
@@ -27,13 +26,28 @@
     <%= f.text_field :gear_id, autofocus: true , class:"form-control"%>
  </div>
 
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+        <%  @gears.each do |gear| %>
+        <!-- column -->
+        <div class= "box col2" >
+        <div class= "">
+          <a href = <%=gear_path(gear)%>>
+            <%= image_tag gear.avatar.url(:medium),class:"img-responsive img-rounded ",style:"margin-buttom:10px" %>
+            </a>
+            <div class="caption">
+            <p>
+            <%= link_to gear.name, gear_path(gear) %>
+            <% gear.id %> 
+            </p>
+        </div>
+        </div>
+    </div>
+        <% end %>
 
-
-
+    </div>
 
 <div class="form-actions">
     <%= f.button :submit %>
 </div>
 
-// select dj gear
 <% end %>
