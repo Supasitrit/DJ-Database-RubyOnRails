@@ -29,6 +29,7 @@ class GearsController < ApplicationController
 
   # GET /gears/1/edit
   def edit
+    @geartype = Geartype.all
   end
 
   def remove_photo
@@ -59,6 +60,7 @@ class GearsController < ApplicationController
   def update
     respond_to do |format|
       if @gear.update(gear_params)
+        # raise "#{params}" 
         format.html { redirect_to @gear, notice: 'Gear was successfully updated.' }
         format.json { render :show, status: :ok, location: @gear }
       else
@@ -86,6 +88,6 @@ class GearsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gear_params
-      params.require(:gear).permit(:name, :description, :geartype_id, :dj_id, :avatar, :buylink)
+      params.require(:gear).permit(:name, :description, :geartype_id, :dj_id, :avatar, :buylink, :geartype_name)
     end
 end

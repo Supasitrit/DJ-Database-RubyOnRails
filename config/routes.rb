@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   resources :djs_gears
 
-  resources :geartypes
-
   resources :gears
 
   mount Commontator::Engine => '/commontator'
