@@ -75,11 +75,6 @@ ActiveRecord::Schema.define(version: 20150321180903) do
     t.datetime "updated_at"
   end
 
-  create_table "djsgears", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "gears", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
@@ -92,12 +87,7 @@ ActiveRecord::Schema.define(version: 20150321180903) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "buylink"
-  end
-
-  create_table "geartypes", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "geartype_name"
   end
 
   create_table "users", force: :cascade do |t|
