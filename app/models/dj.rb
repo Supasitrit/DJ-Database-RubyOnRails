@@ -1,4 +1,5 @@
 class Dj < ActiveRecord::Base
+  validates :name, presence: true
 	require 'will_paginate/array'
 	has_many :djs_gears
 	has_many :gears, through: :djs_gears
