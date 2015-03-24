@@ -29,7 +29,7 @@ class GearsController < ApplicationController
 
   # GET /gears/1/edit
   def edit
-    @geartype = Geartype.all
+    
   end
 
   def remove_photo

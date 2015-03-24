@@ -30,7 +30,7 @@ class DjsGearsController < ApplicationController
 
     respond_to do |format|
       if @djs_gear.save
-        raise "#{params}"
+        # raise "#{params}"
         format.html { redirect_to dj_path(id: @djs_gear.dj.id), notice: 'Djs gear was successfully created.' }
         format.json { render :show, status: :created, location: @djs_gear }
       else

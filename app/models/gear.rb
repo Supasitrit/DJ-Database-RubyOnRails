@@ -1,4 +1,5 @@
 class Gear < ActiveRecord::Base
+	validates :name, presence: true,uniqueness: true
 	has_many :djs_gears
 	has_many :djs, through: :djs_gears
 	belongs_to :geartype
