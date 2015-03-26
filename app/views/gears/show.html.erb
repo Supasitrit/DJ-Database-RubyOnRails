@@ -16,14 +16,15 @@
 <p>
   <%= @gear.geartype %>
   <%= @gear.geartype_id %>
-
+</p>
+<div>
   <strong>Description:</strong><br>
   <% if @gear.description.blank? %>
   <h4> No description available </h4>
   <% else %>
   <%= @gear.description %>
   <% end %>
-</p>
+</div>
 
 <% if @gear.buylink? %>
 <a href= <%=@gear.buylink%> class="btn btn-success" role="button" >Link to manufacturer's page</a>
@@ -43,7 +44,6 @@
 
 
 <div class="col-md-2"></div>
-
 </div>
 </div>
 
@@ -59,14 +59,14 @@
 <%= @gear.name %></h3>
 </div>  
 <% if @gear.djs.count == 0 %>
-<p> We have no record of Dj that use this product, you can add one!! </p>
+<p> We have no record of Dj that use this product. </p>
 <% else %>
 <% @gear.djs.each do |dj|%>
 <div class="col-xm-12 col-sm-4">
 
 
-    <a href=<%=dj_path%>><%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded " %></a>
-    <h2><%= link_to dj.name, dj_path %></h2><br>
+    <a href=<%=dj_path(dj)%>><%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded " %></a>
+    <h2><%= link_to dj.name, dj_path(dj) %></h2><br>
     
     
 </div>

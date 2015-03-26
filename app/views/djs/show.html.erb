@@ -16,10 +16,10 @@
   </strong>
 </h1>
 
-<p>
+<div>
   <strong>Description:</strong>
   <%= @dj.description %>
-</p>
+</div>
 
 <p>
   <strong>Genre:</strong>
@@ -30,7 +30,7 @@
   <strong>ID:</strong>
   <%= @dj.id %>
 </p> -->
-<% if user_signed_in? && current_user.id == 1%>
+<% if user_signed_in? && current_user.id == 1 %>
 	<%= link_to 'Destroy', @dj, method: :delete, data: { confirm: 'Are you sure?' } %>
 	<%= link_to 'Improve This Page!', edit_dj_path(@dj) %>
 <% else %>
@@ -46,8 +46,9 @@
 </div>
 
 
-<% if user_signed_in? && current_user.id == 1 %>
+
 <div class = "container jumbotron">
+<% if user_signed_in? && current_user.id == 1 %>
   <div class="page-header">
     <h3>Gears <%= @dj.name %> Use:</h3><br>
     <a href=<%= new_djs_gear_path(dj_id: @dj)%> class="btn btn-success" role="button">Submit a gear the <%=@dj.name%> use</a>
