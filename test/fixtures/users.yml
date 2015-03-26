@@ -10,17 +10,7 @@ one: {}
 two: {}
 #  column: value
 one:
-  first_name: MyString
-  text: MyString
-  last_name: MyString
-  text: MyString
-  id: MyString
-  integer: MyString
+  email: MyString@string.com
 
 two:
-  first_name: MyString
-  text: MyString
-  last_name: MyString
-  text: MyString
-  id: MyString
-  integer: MyString
+  email: MyyyyyString@string.com

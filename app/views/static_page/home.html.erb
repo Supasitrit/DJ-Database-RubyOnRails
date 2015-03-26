@@ -9,56 +9,6 @@
 </div>
 
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3" class="active"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-  
-        <!-- column -->
-        <%  @djs.each do |dj| %>
-    <div class="item">
-            <div style="text-align:center ">
-            <img  src=<%= dj.avatar.url(:medium)%>></img>
-            </div>
-            <div class="carousel-caption" >
-                <h3>
-                    <%= link_to dj.name, dj_path(dj) %>
-                </h3>
-            </div> 
-    </div>
-<%end%>
-    <div class="item active">
-            <div style=" text-align:center ">
-            <%= image_tag("djdb(fit).jpg")%>
-            </div>
-            <div class="carousel-caption">
-                <h3>
-                    HELLOOO YOOO
-                </h3>
-            </div> 
-    </div>
-    </div>
-
-  
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
 
 <!-- DJS -->
 <div class="jumbotron" style="margin: 10px">
@@ -101,55 +51,6 @@
 
 
 
-<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel" data-interval="3000">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3" class="active"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-  
-        <!-- column -->
-        <%  @gears.each do |dj| %>
-    <div class="item">
-            <div style="text-align:center ">
-            <img  src=<%= dj.avatar.url(:medium)%>></img>
-            </div>
-            <div class="carousel-caption" >
-                <h3>
-                    <%= link_to dj.name, dj_path(dj) %>
-                </h3>
-            </div> 
-    </div>
-<%end%>
-    <div class="item active">
-            <div style=" text-align:center ">
-            <%= image_tag("djdb(fit).jpg")%>
-            </div>
-            <div class="carousel-caption">
-                <h3>
-                    HELLOOO YOOO
-                </h3>
-            </div> 
-    </div>
-    </div>
-
-  
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 
 
 

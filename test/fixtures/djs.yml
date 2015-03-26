@@ -9,3 +9,29 @@ two:
   name: MyString
   description: MyString
   genre: MyString
+
+
+
+
+# lo & behold! I am a YAML comment!
+
+
+
+david:
+  name: David Heinemeier Hansson
+  description: My name is david I'm awesome
+  genre: Trap Arms
+
+steve:
+  name: Steve Ross Kellock
+  description: Handsome Dj
+  genre: keyboard puncher
+
+
+
+
+<% 1000.times do |n| %>
+dj_<%= n %>:
+  name: <%= "dj#{n}" %>
+  description:
+<% end %>
