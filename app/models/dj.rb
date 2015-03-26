@@ -1,10 +1,10 @@
 class Dj < ActiveRecord::Base
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 	require 'will_paginate/array'
 	has_many :djs_gears
 	has_many :gears, through: :djs_gears
 	has_attached_file :avatar, :styles => { 
-  		:medium => "300x300>",
+      :medium => "300x300>",
   		:small => "140x140", 
   		:thumb => "100x100>" }, 
   		:default_url => "/images/:style/missing.png"
