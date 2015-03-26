@@ -6,9 +6,7 @@
 
 
 <div>
-<!-- <%= image_tag @user.avatar.url %> -->
 <%= image_tag @user.avatar.url(:medium), class: "img-thumbnail" %>
-<!-- <%= image_tag @user.avatar.url(:thumb) %> -->
 </div>
 
 <p>
@@ -16,10 +14,6 @@
   <%= @user.email %>
 </p>
 
-<!-- <p>
-  <strong>Id:</strong>
-  <%= @user.id %>
-</p> -->
 
 <% if current_user.id == @user.id %>
 <%= link_to 'Edit', edit_user_path(@user) %> 
