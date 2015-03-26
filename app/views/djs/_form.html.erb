@@ -1,3 +1,6 @@
+
+
+<% if user_signed_in? && current_user.id == 1 %>
 <%= simple_form_for(@dj)  do |f| %>
   <%= f.error_notification %>
 
@@ -33,5 +36,7 @@
   </div>
   <%= f.error_notification %>
 
-
+<% end %>
+<% else %> 
+<h1> YOU ARE NOT ADMIN </h1>
 <% end %>

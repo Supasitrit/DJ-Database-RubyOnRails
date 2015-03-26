@@ -36,8 +36,10 @@
 </p>
  -->
 
-
+<% if user_signed_in? && current_user.id == 1 %>
 <a class = "btn btn-warning" role="button" href=<%=edit_gear_path(@gear)%>>Improve this page</a>
+<%else%>
+<%end%>
 
 
 <div class="col-md-2"></div>

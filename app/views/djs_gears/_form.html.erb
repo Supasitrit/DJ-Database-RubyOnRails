@@ -1,5 +1,5 @@
 
-
+<% if user_signed_in? && current_user.id == 1 %>
 <%= form_for(@djs_gear) do |f| %>
 <%= f.hidden_field :dj_id, value: params[:dj_id] %>
 <%= f.hidden_field :gear_id, value: params[:gear_id] %>
@@ -31,4 +31,7 @@
     <%= f.button :submit %>
 </div>
 
+<% end %>
+<% else %> 
+<h1> YOU ARE NOT ADMIN </h1>
 <% end %>

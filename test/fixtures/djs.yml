@@ -29,9 +29,3 @@ steve:
 
 
 
-
-<% 1000.times do |n| %>
-dj_<%= n %>:
-  name: <%= "dj#{n}" %>
-  description:
-<% end %>
