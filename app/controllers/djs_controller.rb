@@ -1,5 +1,6 @@
 class DjsController < ApplicationController
   before_action :set_dj, only: [:show, :edit, :update, :destroy]
+  before_action :check_admin, only: [:update,:destroy,:create,:edit]
 
   # GET /djs
   # GET /djs.json
@@ -104,6 +105,9 @@ class DjsController < ApplicationController
   end
 
   private
+    def check_admin
+      raise "not admin" if current_user.id != 1
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_dj
       @dj = Dj.find(params[:id])
