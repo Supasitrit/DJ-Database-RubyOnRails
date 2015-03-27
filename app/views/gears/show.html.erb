@@ -14,17 +14,16 @@
 </p>
 
 <p>
-  <%= @gear.geartype %>
-  <%= @gear.geartype_id %>
-</p>
-<div>
   <strong>Description:</strong><br>
+</p>
   <% if @gear.description.blank? %>
   <h4> No description available </h4>
   <% else %>
+  <div>
   <%= @gear.description %>
   <% end %>
 </div>
+<p></p>
 
 <% if @gear.buylink? %>
 <a href= <%=@gear.buylink%> class="btn btn-success" role="button" >Link to manufacturer's page</a>
