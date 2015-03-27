@@ -22,6 +22,7 @@ class DjsController < ApplicationController
       @djs = Dj.order("created_at DESC")
     end
   end
+  
   def resultall
     if params[:search]
       @djs = Dj.search(params[:search]).order("created_at DESC")
@@ -46,10 +47,10 @@ class DjsController < ApplicationController
     @gears = Gear.all
   end
 
-  def djgear
-    @gears = Gear.all 
-    @dj = Dj.find(params[:dj_id].to_i)
-  end
+  # def djgear
+  #   @gears = Gear.all 
+  #   @dj = Dj.find(params[:dj_id].to_i)
+  # end
 
   
 

@@ -1,8 +1,22 @@
 require 'test_helper'
 
 class DjsControllerTest < ActionController::TestCase
+  
+  include Devise::TestHelpers
+
+
+
   setup do
     @dj = djs(:one)
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+    sign_in FactoryGirl.create(:user)
+
+  end
+
+  test "login with invalid credentials" do
+    User.stubs(:authenticate).returns false
+    post :login, :coach => {:user_name => 'foo', :password =>'bar'}
+    assert_equals flash[:error] , "Authentication failed"
   end
 
   test "should get index" do
