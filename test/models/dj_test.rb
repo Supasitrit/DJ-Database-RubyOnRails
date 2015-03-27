@@ -30,5 +30,4 @@ class DjTest < ActiveSupport::TestCase
   	dj = Dj.new(:name => "way toooooooo longgggasdfasdjkf;lajsdf;lkjasd;lfkjas;dlkfjka;lsdkfj;lasdkjf;laskdjf;laksjdf;lakjsdf;jas;dlkfkja;sdklfjka;sldkjfj;asldkjjf;alskdjfl;askdjf;laksdjf;laskdfjasdf;lkj")
 	assert_not dj.save, "Saved long name Dj"  
   end
-
 end

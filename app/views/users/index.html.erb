@@ -1,3 +1,7 @@
+
+<% if user_signed_in? && current_user.id == 1 %>
+
+
 <div class"container" style="margin-top:50px">
 <p id="notice"><%= notice %></p>
 
@@ -30,3 +34,11 @@
 
 <%= link_to 'New User', new_user_path %>
 </div>
+
+
+
+<% else %>
+<h1>
+YOU ARE NOT ADMIN
+</h1>
+<%end%>
