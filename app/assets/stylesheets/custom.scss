@@ -124,12 +124,6 @@ body {
 .col4 img { max-width: 380px; }
 .col5 img { max-width: 480px; }
 
-
-
-
-
-
-
 .box1 {
         position:                   relative;
         display:                    block;
@@ -153,7 +147,7 @@ body {
         bottom:                     0px;
         left:                       0px;
     }
-
+    
     .box1 .text:before {
         content:                    '...';
         text-align:                 right;
