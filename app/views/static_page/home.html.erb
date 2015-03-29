@@ -1,7 +1,7 @@
 
 
 
-<div class="jumbotron" >
+<div class="jumbotron" style="margin:10px">
         <h1><strong>Welcome to DJ Database</strong> </h1>
     <h2>Find djs and gears they use!</h2>
 
@@ -25,7 +25,6 @@
         <div class= "col-xs-12 col-sm-3" >
             <div class="">
             <a href = <%=dj_path(dj)%>>
-            <!--<%= image_tag( dj.name+".jpg", :alt => "djs-images", class:"img-responsive", style: "min-height: auto")%>-->
             <%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded" %>
             </a>
             <div class="caption" style="text-align:center">

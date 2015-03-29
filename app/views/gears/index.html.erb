@@ -4,11 +4,10 @@
 
   <div style="">
     
-    <% if user_signed_in? %>
-    <a href = <%=new_gear_path%>><button class = "btn btn-success btn-lg" >Add New Gear</button>
-    </a>
+    <% if user_signed_in? && current_user.id == 1%>
+        <a href = <%=new_gear_path%>><button class = "btn btn-success btn-lg" >Add New Gear</button>
+        </a>
     <% else %>
-        <p> Log in to submit a gear!!</p>
     <% end %>
     </div>
 

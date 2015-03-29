@@ -1,84 +1,62 @@
-<div class="row jumbotron" style="margin-top:50px">
-<div class="col-md-4">
-<div class="container ">
-<%= image_tag @gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
-</div>
-</div>
-  <div class="col-md-6">
-	<p id="notice"><%= notice %></p>
-
-<p>
-  <h1>
-    <%= @gear.name %>
-  </h1>
-</p>
-
-<p>
-  <strong>Description:</strong><br>
-</p>
-  <% if @gear.description.blank? %>
-  <h4> No description available </h4>
-  <% else %>
-  <div>
-  <%= @gear.description %>
-  <% end %>
-</div>
-<p></p>
-
-<% if @gear.buylink? %>
-<a href= <%=@gear.buylink%> class="btn btn-success" role="button" >Link to manufacturer's page</a>
-<%else%>
-<% end %>
-<!-- 
-<p>
-  <strong>Geartype:</strong>
-  <%= @gear.geartype_id %>
-</p>
- -->
-
-<% if user_signed_in? && current_user.id == 1 %>
-<a class = "btn btn-warning" role="button" href=<%=edit_gear_path(@gear)%>>Improve this page</a>
-<%else%>
-<%end%>
-
-
-<div class="col-md-2"></div>
-</div>
-</div>
-
-
-
-
-
-
-
-<div class="container jumbotron">
+<div class=" jumbotron">
+<!-- Gear Profile -->
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        <%= image_tag @gear.avatar.url(:medium),class:"img-responsive img-rounded" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+  	<p id="notice"><%= notice %></p>
+    <p>
+      <h1>
+        <strong><%= @gear.name %></strong>
+      </h1>
+    </p>
+    <p>
+      <strong>Description:</strong><br>
+    </p>
+    <% if @gear.description.blank? %>
+      <h4> No description available </h4>
+    <% else %>
+      <h4>
+        <%= @gear.description %>
+        <% end %>
+      </h4>
+    <% if @gear.buylink? %>
+      <a href= <%=@gear.buylink%> class="btn btn-success" role="button" >Link to manufacturer's page</a>
+    <%else%>
+    <% end %>
+    <% if user_signed_in? && current_user.id == 1 %>
+      <a class = "btn btn-warning" role="button" href=<%=edit_gear_path(@gear)%>>Improve this page</a>
+    <%else%>
+    <%end%>
+    </div>
+      <div class="col-md-2"></div>
+  </div>
+<!-- End Gear Profile -->
+<!-- GearsDj -->
+<div class="col-md-12">
   <div class="page-header">
-  <h3><strong>Dj that use </strong>
-<%= @gear.name %></h3>
-</div>  
-<% if @gear.djs.count == 0 %>
-<p> We have no record of Dj that use this product. </p>
-<% else %>
-<% @gear.djs.each do |dj|%>
-<div class="col-xm-12 col-sm-4">
-
-
-    <a href=<%=dj_path(dj)%>><%= image_tag dj.avatar.url(:medium),class:"img-responsive img-rounded " %></a>
-    <h2><%= link_to dj.name, dj_path(dj) %></h2><br>
-    
-    
-</div>
-<% end %>
+    <h3>Dj that use <strong><%= @gear.name %></strong></h3>
+  </div>  
+  <% if @gear.djs.count == 0 %>
+    <p> We have no record of Dj that use this product. </p>
+  <% else %>
+  <% @gear.djs.each do |dj|%>
+  <div class="col-xm-12 col-sm-2">
+    <a href=<%=dj_path(dj)%>><%= image_tag dj.avatar.url(:thumb),class:"img-responsive img-rounded " %></a>
+    <h3><%= link_to dj.name, dj_path(dj) %></h3><br>
+  </div>
+  <% end %>
   <% end %>
 </div> 
-
-
-
-
-<div class = "jumbotron">
+<!-- End of GearsDj -->
+<!-- Comments -->
+<div>
   <div class="page-header">
-    <h3> Comments on this Gear</h3>
+    <h3> <strong>Comments</strong> on this Gear</h3>
   </div>
   <%= commontator_thread(@gear) %>
 </div>
+</div><!-- Container -->
