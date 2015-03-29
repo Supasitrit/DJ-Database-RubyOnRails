@@ -1,4 +1,4 @@
-#Ruby On Rails Project 
+#Ruby On Rails Project for Internet Programming Class
 By: Supasit Tanapatpiboon ID: 5481080
 
 
