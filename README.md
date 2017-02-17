@@ -29,3 +29,11 @@ Masonry-rails:
 better_errors:
 
 	Better error page for Rack apps
+
+##setup
+
+	install imagemagick
+	http://cactuslab.com/imagemagick/
+	
+	rake db:migrate
+	rails s
